@@ -5,4 +5,4 @@
 **/*.vpwhist
 **/*.vtg
 !Software/Regulated_power_source/FreeMaster/widgets/ReadMe.txt
-*.hgignore
+**/*.hgignore
