@@ -1,0 +1,7 @@
+**/debug/**
+**/BrowseInfo/**
+**/Obj
+**/FreeMaster/widgets/**
+**/*.vpwhist
+**/*.vtg
+!Software/Regulated_power_source/FreeMaster/widgets/ReadMe.txt
