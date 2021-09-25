@@ -1,7 +1,7 @@
  # Плата контроллера резервного питания BACKPMAN v2.0
  (Backup power management controller)
 
- - Описание схемы BACKPMAN v1.0 (https://habr.com/ru/post/557242/) схема BACKPMAN v2.0 отличается только новым микроконтроллером и наличием разъема SD карты   
+ - Описание схемы BACKPMAN v1.0 (https://habr.com/ru/post/557242/). Схема BACKPMAN v2.0 отличается только новым микроконтроллером и наличием разъема SD карты   
  - Описание разработки платы BACKPMAN v1.0 (https://habr.com/ru/post/562462/)
  - Установка Azure RTOS на BACKPMAN v1.0 (https://habr.com/ru/post/573352/). 
  - Технологии отладки и тюнинг платы BACKPMAN v1.0 (https://habr.com/ru/post/574088/)  
