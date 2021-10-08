@@ -680,14 +680,13 @@ static void USBD_FrameWork_CDC_ECM_Desc(USBD_DevClassHandleTypeDef *pdev, uint32
     pIadDesc->bDescriptorType      = USB_DESC_TYPE_IAD;
     pIadDesc->bFirstInterface      = pdev->tclasslist[pdev->classId].Ifs[0];
     pIadDesc->bInterfaceCount      = 2;    // 2 interfaces
-    pIadDesc->bFunctionClass       = 0xEF; //0xE0; // Wireless Controller
-    pIadDesc->bFunctionSubClass    = 0x04; //0x01; //
-    pIadDesc->bFunctionProtocol    = 0x01; //0x03; // Remote NDIS
+    pIadDesc->bFunctionClass       = 0xEF; // Wireless Controller
+    pIadDesc->bFunctionSubClass    = 0x04; //
+    pIadDesc->bFunctionProtocol    = 0x01; //
     pIadDesc->iFunction            = 0; /* String Index */
     *dscr_size                     += (uint32_t)sizeof(USBD_IadDescTypedef);
   }
 
-  //USBD_framework_set_if(descriptor_ptr, pdev, dscr_size, pdev->tclasslist[pdev->classId].Ifs[0], 0, 1, 0xE0, 0x01, 0x03, 0);     // Control Interface Descriptor
   USBD_framework_set_if(descriptor_ptr, pdev, dscr_size, pdev->tclasslist[pdev->classId].Ifs[0], 0, 1, 0x02, 0x02, 0x00, 0);     // Control Interface Descriptor
 
   pHeadDesc =((USBD_CDCHeaderFuncDescTypedef *)((uint32_t)descriptor_ptr +*dscr_size));  // Control interface headers

@@ -274,11 +274,11 @@ extern "C"
 #endif /* USBD_CONFIG_BMATTRIBUTES */
 
   /* Device CDC-ACM Class */
-#define USBD_CDCACM_EPINCMD_ADDR                      0x87 //0x82U
+#define USBD_CDCACM_EPINCMD_ADDR                      0x87
 #define USBD_CDCACM_EPINCMD_FS_MPS                    8U
 #define USBD_CDCACM_EPINCMD_HS_MPS                    8U
-#define USBD_CDCACM_EPIN_ADDR                         0x88 //0x83U
-#define USBD_CDCACM_EPOUT_ADDR                        0x06 //0x01U
+#define USBD_CDCACM_EPIN_ADDR                         0x88
+#define USBD_CDCACM_EPOUT_ADDR                        0x06
 #if (USBD_CDCACM_EPIN_ADDR == (USBD_CDCACM_EPOUT_ADDR & 0x0FU))
 #error Address endpoint IN shall be different form endpoint OUT.
 #endif
