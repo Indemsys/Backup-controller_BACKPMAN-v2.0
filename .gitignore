@@ -12,3 +12,5 @@ CMakeLists.txt
 *.zip
 **/*.dep
 *.ewd
+**/.ninja_log
+**/.ninja_deps
