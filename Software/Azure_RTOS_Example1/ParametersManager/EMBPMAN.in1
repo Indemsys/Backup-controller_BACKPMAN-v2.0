@@ -1,0 +1,23 @@
+[TfrmCSorceGen]
+FormVersion=0
+Flags=0
+ShowCmd=1
+PixelsPerInch=96
+MinMaxPos(1920x1200)=-1,-1,-1,-1
+MinMaxPos=-1,-1,-1,-1
+NormPos(1920x1200)=495,318,1240,745
+NormPos=495,318,1240,745
+Visible=0
+deCSourcePath_DialogText=
+deCSourcePath_Text=d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Example1\App\Parameters
+edGenFileName_Text=BKMAN2_1_Params.c
+edFreeMasterFileName_Text=BKMAN2_1_FreeMaster_vars.c
+cb_GenFreeMaster_Checked=True
+MinMaxPos(3440x1440)=-1,-1,-1,-1
+NormPos(3440x1440)=495,318,1240,745
+[TfrmCSorceGen.memoIncludedInfo_Lines]
+Count=4
+Item0=#include "App.h"
+Item1=#include "freemaster_cfg.h"
+Item2=#include "freemaster.h"
+Item3=#include "freemaster_tsa.h"

@@ -6,3 +6,9 @@
 **/*.vtg
 !Software/Regulated_power_source/FreeMaster/widgets/ReadMe.txt
 **/*.hgignore
+**/.hg
+.idea
+CMakeLists.txt
+*.zip
+**/*.dep
+*.ewd

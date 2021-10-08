@@ -1,0 +1,1 @@
+python convert_encoding.py -f guess -t utf_8 -e dos   **\**\**\*.c **\**\*.c **\*.c **\**\**\*.h **\**\*.h **\*.h
