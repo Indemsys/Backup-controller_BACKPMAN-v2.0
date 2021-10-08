@@ -2,8 +2,8 @@
   #define SERIAL_DRIVER_H
 
 
-  #define GET_MCBL     T_monitor_cbl    *mcbl = (T_monitor_cbl*)(tx_thread_identify()->environment); \
-                       T_monitor_driver *mdrv = (T_monitor_driver*)(tx_thread_identify()->driver);
+  #define GET_MCBL     T_monitor_cbl      *mcbl = (T_monitor_cbl*)(tx_thread_identify()->environment); \
+                       T_serial_io_driver *mdrv = (T_serial_io_driver*)(tx_thread_identify()->driver);
 
   #define MPRINTF      mdrv->_printf
   #define WAIT_CHAR    mdrv->_wait_char
@@ -27,7 +27,7 @@ typedef struct
     int              (*_printf)(const char *, ...);               // Возвращает неопределенный результат
     int              (*_deinit)(void **pcbl);
     void              *pdrvcbl;                                   // Указатель на управляющую структуру необходимую для работы драйвера
-} T_monitor_driver;
+} T_serial_io_driver;
 
 
 #endif // SERIAL_DRIVER_H
