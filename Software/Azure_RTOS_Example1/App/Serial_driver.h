@@ -19,8 +19,8 @@
 
 typedef struct
 {
-    const uint32_t   mark;
-    const int        driver_type;
+    const uint32_t   mark;                                            // Magic word. Идентифицирует блок как управляющую структуру драйвера
+    const int        driver_type;                                     // Идентификатор типа драйвера
     int              (*_init)(void **pcbl, void *pdrv);               // Инициализация
     int              (*_send_buf)(const void *buf, unsigned int len); // Отсылка буфера с данными
     int              (*_wait_char)(unsigned char *b,  int ticks);     // Ожидание символа. ticks - время ожидания выражается в тиках (если 0 то без ожидания)
