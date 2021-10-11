@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.10.1.308/W64 for ARM                  11/Oct/2021  12:09:17
+# IAR ELF Linker V9.10.1.308/W64 for ARM                  11/Oct/2021  12:37:52
 # Copyright 2007-2021 IAR Systems AB.
 #
 #    Output file  =
@@ -1904,7 +1904,7 @@ initialize by copy { rw };
   .intvec            ro code   0x800'0000     0x298  startup_stm32h753xx.o [34]
                              - 0x800'0298     0x298
 
-"P1":                                      0x2'acc8
+"P1":                                      0x2'ad67
   .text              ro code   0x800'0298    0x1a74  stm32h7xx_hal_rcc_ex.o [33]
   .text              ro code   0x800'1d0c       0xc  stm32h7xx_hal.o [33]
   .text              ro code   0x800'1d18     0x618  stm32h7xx_hal_rcc.o [33]
@@ -2014,7 +2014,7 @@ initialize by copy { rw };
   .text              ro code   0x800'c0d4     0x228  tx_event_flags_set.o [38]
   .text              ro code   0x800'c2fc      0x14  tx_time_get.o [38]
   .text              ro code   0x800'c310       0x2  I64DivZer.o [45]
-  .rodata            const     0x800'c312       0x2  xlocale_c.o [43]
+  .rodata            const     0x800'c312       0x2  FreeMaster_vars_map.o [1]
   .text              ro code   0x800'c314       0x6  ABImemclr.o [45]
   .text              ro code   0x800'c31a       0x6  abort.o [43]
   .text              ro code   0x800'c320      0x2c  xgetmemchunk.o [43]
@@ -2053,7 +2053,7 @@ initialize by copy { rw };
   .rodata            const     0x800'ecc6       0x2  xlocale_c.o [43]
   .text              ro code   0x800'ecc8      0xe4  nx_packet_release.o [29]
   .text              ro code   0x800'edac      0x1a  nx_udp_socket_source_send.o [29]
-  .text              ro code   0x800'edc6       0x2  nx_tcp_cleanup_deferred.o [29]
+  .rodata            const     0x800'edc6       0x2  xlocale_c.o [43]
   .text              ro code   0x800'edc8      0x68  nx_utility.o [29]
   .text              ro code   0x800'ee30      0x2a  nx_udp_packet_info_extract.o [29]
   .text              ro code   0x800'ee5a      0x96  nx_packet_data_extract_offset.o [29]
@@ -2066,15 +2066,16 @@ initialize by copy { rw };
   .text              ro code   0x800'f2b0      0xac  tx_event_flags_delete.o [38]
   .text              ro code   0x800'f35c      0x9c  rand.o [43]
   .text              ro code   0x800'f3f8      0x6a  nx_udp_free_port_find.o [29]
-  .rodata            const     0x800'f462       0x1  BKMAN2_1_Params.o [5]
-  .rodata            const     0x800'f463       0x1  MonitorVT100.o [7]
+  .text              ro code   0x800'f462       0x2  nx_tcp_cleanup_deferred.o [29]
   .text              ro code   0x800'f464      0x78  nx_udp_bind_cleanup.o [29]
   .text              ro code   0x800'f4dc      0x2a  tx_timer_activate.o [38]
-  .rodata            const     0x800'f506       0x1  xlocale_c.o [43]
+  .rodata            const     0x800'f506       0x1  BKMAN2_1_Params.o [5]
+  .rodata            const     0x800'f507       0x1  MonitorVT100.o [7]
   .text              ro code   0x800'f508      0x70  tx_thread_resume.o [38]
   .text              ro code   0x800'f578      0xcc  tx_timer_deactivate.o [38]
   .text              ro code   0x800'f644      0x8c  tx_thread_preemption_change.o [38]
   .text              ro code   0x800'f6d0     0x10a  nx_ip_checksum_compute.o [29]
+  .rodata            const     0x800'f7da       0x1  xlocale_c.o [43]
   .text              ro code   0x800'f7dc     0x24c  nx_ip_route_find.o [29]
   .text              ro code   0x800'fa28      0xe4  nx_arp_entry_allocate.o [29]
   .text              ro code   0x800'fb0c      0xcc  nx_arp_packet_send.o [29]
@@ -2394,308 +2395,270 @@ initialize by copy { rw };
   .text              ro code   0x802'8118       0x8  ux_utility_event_flags_set.o [39]
   .text              ro code   0x802'8120      0xe0  ux_device_class_cdc_acm_control_request.o [40]
   .text              ro code   0x802'8200      0xd4  nx_tcp_client_bind_cleanup.o [29]
-  .text              ro code   0x802'82d4      0xd0  nx_ip_fragment_timeout_check.o [29]
-  .text              ro code   0x802'83a4      0xd0  tx_mutex_cleanup.o [38]
-  .text              ro code   0x802'8474      0xd0  ux_device_class_cdc_acm_bulkin_thread.o [40]
-  .text              ro code   0x802'8544      0xb8  nx_tcp_deferred_cleanup_check.o [29]
-  .text              ro code   0x802'85fc      0xa4  nx_icmpv4_process_echo_request.o [29]
-  .rodata            const     0x802'86a0      0x98  Params_editor.o [7]
-  .text              ro code   0x802'8738      0x98  IDLE_task.o [1]
-  .rodata            const     0x802'87d0      0x94  Params_editor.o [7]
-  .text              ro code   0x802'8864      0x94  ux_dcd_stm32_function.o [42]
-  .text              ro code   0x802'88f8       0x4  ux_dcd_stm32_frame_number_get.o [42]
-  .text              ro code   0x802'88fc      0x7e  ux_dcd_stm32_transfer_request.o [42]
-  .text              ro code   0x802'897a      0x4e  ux_dcd_stm32_endpoint_create.o [42]
-  .text              ro code   0x802'89c8      0x16  ux_dcd_stm32_endpoint_destroy.o [42]
-  .text              ro code   0x802'89de      0x1e  ux_dcd_stm32_endpoint_reset.o [42]
-  .text              ro code   0x802'89fc      0x1e  ux_dcd_stm32_endpoint_status.o [42]
-  .text              ro code   0x802'8a1c      0x94  ux_device_class_storage_control_request.o [40]
-  .text              ro code   0x802'8ab0      0x90  nx_tcp_packet_receive.o [29]
-  .text              ro code   0x802'8b40      0x90  tx_event_flags_cleanup.o [38]
-  .rodata            const     0x802'8bd0      0x88  MonitorVT100.o [7]
-  .text              ro code   0x802'8c58      0x88  tx_byte_pool_cleanup.o [38]
-  .text              ro code   0x802'8ce0      0x88  tx_semaphore_cleanup.o [38]
-  .text              ro code   0x802'8d68      0x88  ux_device_class_cdc_acm_initialize.o [40]
-  .text              ro code   0x802'8df0      0x82  nx_icmpv4_packet_process.o [29]
-  .text              ro code   0x802'8e74      0x7c  nx_icmp_packet_receive.o [29]
-  .text              ro code   0x802'8ef0      0x24  nx_icmp_packet_process.o [29]
-  .text              ro code   0x802'8f14      0x7a  nx_tcp_periodic_processing.o [29]
-  .text              ro code   0x802'8f90      0x78  Main_thread.o [1]
-  .text              ro code   0x802'9008      0x52  Net_common.o [4]
-  .text              ro code   0x802'905c      0x2c  nx_secure_tls_initialize.o [31]
-  .text              ro code   0x802'9088      0x78  nx_packet_pool_cleanup.o [29]
-  .text              ro code   0x802'9100      0x74  ux_device_class_cdc_acm_bulkout_thread.o [40]
-  .rodata            const     0x802'9174      0x70  BKMAN2_1_Params_dyn_tables.o [5]
-  .text              ro code   0x802'91e4      0x70  nx_udp_receive_cleanup.o [29]
-  .text              ro code   0x802'9254      0x60  ux_device_class_rndis_interrupt_thread.o [40]
-  .rodata            const     0x802'92b4      0x5c  MonitorVT100.o [7]
-  .rodata            const     0x802'9310      0x5c  USB_RNDIS_driver.o [6]
-  .text              ro code   0x802'936c      0x5c  tx_thread_shell_entry.o [38]
-  .text              ro code   0x802'93c8      0x58  ux_device_class_rndis_deactivate.o [40]
-  .text              ro code   0x802'9420      0x58  ux_device_class_storage_entry.o [40]
-  .text              ro code   0x802'9478      0x24  ux_device_class_storage_uninitialize.o [40]
-  .text              ro code   0x802'949c      0x26  ux_device_class_storage_activate.o [40]
-  .text              ro code   0x802'94c2      0x36  ux_device_class_storage_deactivate.o [40]
-  .text              ro code   0x802'94f8      0x52  ux_device_class_rndis_entry.o [40]
-  .rodata            const     0x802'954c      0x50  iar_Stoulx.o [43]
-  .rodata            const     0x802'959c      0x50  iar_Stoullx.o [43]
-  .text              ro code   0x802'95ec      0x4e  ux_device_class_cdc_acm_entry.o [40]
-  .text              ro code   0x802'963a      0x24  ux_device_class_cdc_acm_unitialize.o [40]
-  .text              ro code   0x802'965e      0x1c  ux_device_class_cdc_acm_activate.o [40]
-  .text              ro code   0x802'967a      0x4c  ux_device_class_cdc_acm_deactivate.o [40]
-  .rodata            const     0x802'96c8      0x4c  MonitorVT100.o [7]
-  .rodata            const     0x802'9714      0x4c  Params_editor.o [7]
-  .rodata            const     0x802'9760      0x4c  stm32h7xx_hal_fdcan.o [33]
-  .text              ro code   0x802'97ac      0x4c  App_ISRs.o [1]
-  .text              ro code   0x802'97f8      0x4a  ux_device_class_rndis_write.o [40]
-  .rodata            const     0x802'9844      0x48  MonitorVT100.o [7]
-  .rodata            const     0x802'988c      0x44  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'98d0      0x48  strto64.o [44]
-  .rodata            const     0x802'9918      0x44  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'995c      0x44  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'99a0      0x40  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'99e0      0x3c  logger.o [1]
-  .rodata            const     0x802'9a1c      0x3c  USB_RNDIS_driver.o [6]
-  .text              ro code   0x802'9a58      0x3c  tx_thread_timeout.o [38]
-  .text              ro code   0x802'9a94      0x3a  nx_tcp_queue_process.o [29]
-  .rodata            const     0x802'9ad0      0x38  BKMAN2_1_Params.o [5]
-  .text              ro code   0x802'9b08      0x38  nx_arp_queue_process.o [29]
-  .text              ro code   0x802'9b40      0x38  zero_init3.o [45]
-  .rodata            const     0x802'9b78      0x34  NV_store.o [5]
-  .rodata            const     0x802'9bac      0x34  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'9be0      0x34  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'9c14      0x30  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'9c44      0x30  logger.o [1]
-  .text              ro code   0x802'9c74      0x2e  nx_icmp_queue_process.o [29]
-  .rodata            const     0x802'9ca4      0x2c  Net_common.o [4]
-  .rodata            const     0x802'9cd0      0x2c  Net_Telnet.o [4]
-  .rodata            const     0x802'9cfc      0x28  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'9d24      0x28  ux_device_class_cdc_acm_ioctl.o [40]
-  .rodata            const     0x802'9d4c      0x28  ux_device_class_cdc_acm_ioctl.o [40]
-  .rodata            const     0x802'9d74      0x28  ux_device_class_rndis_initialize.o [40]
-  .rodata            const     0x802'9d9c      0x28  xscanffull_nomb.o [43]
-  .text              ro code   0x802'9dc4      0x28  data_init.o [45]
-  .rodata            const     0x802'9dec      0x24  MonitorVT100.o [7]
-  .rodata            const     0x802'9e10      0x24  MonitorVT100.o [7]
-  .rodata            const     0x802'9e34      0x24  Net_Telnet.o [4]
-  .rodata            const     0x802'9e58      0x24  Net_Telnet.o [4]
-  .rodata            const     0x802'9e7c      0x24  NV_store.o [5]
-  .rodata            const     0x802'9ea0      0x24  ux_device_class_cdc_acm_initialize.o [40]
-  .rodata            const     0x802'9ec4      0x24  ux_device_class_cdc_acm_ioctl.o [40]
-  .rodata            const     0x802'9ee8      0x24  ux_device_class_rndis_initialize.o [40]
-  .rodata            const     0x802'9f0c      0x24  ux_device_class_rndis_initialize.o [40]
-  .rodata            const     0x802'9f30      0x24  ux_device_class_rndis_initialize.o [40]
-  .rodata            const     0x802'9f54      0x24  xscanffull_nomb.o [43]
-  .text              ro code   0x802'9f78      0x22  fpinit_M.o [44]
-  .iar.init_table    const     0x802'9f9c      0x28  - Linker created -
-  .rodata            const     0x802'9fc4      0x20  BKMAN2_1_FreeMaster_vars.o [5]
-  .rodata            const     0x802'9fe4      0x20  MonitorVT100.o [7]
-  .rodata            const     0x802'a004      0x20  NV_store.o [5]
-  .rodata            const     0x802'a024      0x20  nxd_telnet_server.o [26]
-  .rodata            const     0x802'a044      0x20  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a064      0x20  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a084      0x20  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a0a4      0x20  ux_device_class_cdc_acm_initialize.o [40]
-  .rodata            const     0x802'a0c4      0x20  ux_device_class_rndis_initialize.o [40]
-  .rodata            const     0x802'a0e4      0x20  ux_device_stack_initialize.o [39]
-  .rodata            const     0x802'a104      0x20  ux_network_driver.o [41]
-  .text              ro code   0x802'a124      0x1e  cmain.o [45]
-  .text              ro code   0x802'a142       0x4  low_level_init.o [43]
-  .text              ro code   0x802'a146       0x4  exit.o [43]
-  .text              ro code   0x802'a14c       0xe  cexit.o [45]
-  .rodata            const     0x802'a15c      0x1c  logger.o [1]
-  .rodata            const     0x802'a178      0x1c  MonitorVT100.o [7]
-  .rodata            const     0x802'a194      0x1c  Net_Telnet.o [4]
-  .rodata            const     0x802'a1b0      0x1c  Net_Telnet.o [4]
-  .rodata            const     0x802'a1cc      0x1c  Net_Telnet.o [4]
-  .rodata            const     0x802'a1e8      0x1c  nxd_dhcp_server.o [11]
-  .rodata            const     0x802'a204      0x1c  nxd_dhcp_server.o [11]
-  .rodata            const     0x802'a220      0x1c  nxd_telnet_server.o [26]
-  .rodata            const     0x802'a23c      0x1c  Params_editor.o [7]
-  .rodata            const     0x802'a258      0x1c  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a274      0x1c  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a290      0x1c  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a2ac      0x1c  ux_device_class_rndis_initialize.o [40]
-  .rodata            const     0x802'a2c8      0x1c  ux_device_class_rndis_initialize.o [40]
-  .rodata            const     0x802'a2e4      0x1c  ux_network_driver.o [41]
-  .text              ro code   0x802'a300      0x1c  cstartup_M.o [45]
-  .rodata            const     0x802'a31c      0x18  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'a334      0x18  freemaster_protocol.o [3]
-  .rodata            const     0x802'a34c      0x18  FreeMaster_thread.o [1]
-  .rodata            const     0x802'a364      0x18  MonitorVT100.o [7]
-  .rodata            const     0x802'a37c      0x18  Net_common.o [4]
-  .rodata            const     0x802'a394      0x18  Net_Telnet.o [4]
-  .rodata            const     0x802'a3ac      0x18  Net_Telnet.o [4]
-  .rodata            const     0x802'a3c4      0x18  Net_Telnet.o [4]
-  .rodata            const     0x802'a3dc      0x18  Net_Telnet.o [4]
-  .rodata            const     0x802'a3f4      0x18  Net_Telnet.o [4]
-  .rodata            const     0x802'a40c      0x18  Net_Telnet.o [4]
-  .rodata            const     0x802'a424      0x18  NV_store.o [5]
-  .rodata            const     0x802'a43c      0x18  nxd_dhcp_server.o [11]
-  .rodata            const     0x802'a454      0x18  nxd_dhcp_server.o [11]
-  .rodata            const     0x802'a46c      0x18  nxd_telnet_server.o [26]
-  .rodata            const     0x802'a484      0x18  stm32h7xx_hal_uart.o [33]
-  .rodata            const     0x802'a49c      0x18  tx_iar.o [37]
-  .rodata            const     0x802'a4b4      0x18  tx_iar.o [37]
-  .rodata            const     0x802'a4cc      0x18  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a4e4      0x18  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a4fc      0x18  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a514      0x18  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a52c      0x18  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a544      0x18  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a55c      0x18  ux_device_class_storage_initialize.o [40]
-  .rodata            const     0x802'a574      0x14  BKMAN2_1_FreeMaster_vars.o [5]
-  .rodata            const     0x802'a588      0x14  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'a59c      0x14  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'a5b0      0x14  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'a5c4      0x14  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'a5d8      0x14  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'a5ec      0x14  freemaster_protocol.o [3]
-  .rodata            const     0x802'a600      0x14  freemaster_protocol.o [3]
-  .rodata            const     0x802'a614      0x14  freemaster_rec.o [3]
-  .rodata            const     0x802'a628      0x14  FreeMaster_thread.o [1]
-  .rodata            const     0x802'a63c      0x14  logger.o [1]
-  .rodata            const     0x802'a650      0x14  logger.o [1]
-  .rodata            const     0x802'a664      0x14  Main_thread.o [1]
-  .rodata            const     0x802'a678      0x14  MonitorVT100.o [7]
-  .rodata            const     0x802'a68c      0x14  MonitorVT100.o [7]
-  .rodata            const     0x802'a6a0      0x14  MonitorVT100.o [7]
-  .rodata            const     0x802'a6b4      0x14  MonitorVT100.o [7]
-  .rodata            const     0x802'a6c8      0x14  nxd_dhcp_server.o [11]
-  .rodata            const     0x802'a6dc      0x14  nxd_dhcp_server.o [11]
-  .rodata            const     0x802'a6f0      0x14  nxd_telnet_server.o [26]
-  .rodata            const     0x802'a704      0x14  Params_editor.o [7]
-  .rodata            const     0x802'a718      0x14  Params_editor.o [7]
-  .rodata            const     0x802'a72c      0x14  Params_editor.o [7]
-  .rodata            const     0x802'a740      0x14  tx_timer_initialize.o [38]
-  .rodata            const     0x802'a754      0x14  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a768      0x14  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a77c      0x14  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a790      0x14  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a7a4      0x14  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a7b8      0x10  BKMAN2_1_FreeMaster_vars.o [5]
-  .rodata            const     0x802'a7c8      0x10  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'a7d8      0x10  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'a7e8      0x10  FreeMaster_thread.o [1]
-  .rodata            const     0x802'a7f8      0x10  FreeMaster_vars_map.o [1]
-  .rodata            const     0x802'a808      0x10  Mem_man.o [1]
-  .rodata            const     0x802'a818      0x10  MonitorVT100.o [7]
-  .rodata            const     0x802'a828      0x10  Net_Telnet.o [4]
-  .rodata            const     0x802'a838      0x10  Net_Telnet.o [4]
-  .rodata            const     0x802'a848      0x10  nx_icmpv6_send_ns.o [29]
-  .rodata            const     0x802'a858      0x10  nx_icmpv6_send_rs.o [29]
-  .rodata            const     0x802'a868      0x10  system_stm32h7xx.o [32]
-  .rodata            const     0x802'a878      0x10  USB_CDC_driver.o [6]
-  .rodata            const     0x802'a888      0x10  USB_CDC_driver.o [6]
-  .rodata            const     0x802'a898      0x10  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a8a8      0x10  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a8b8      0x10  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'a8c8      0x10  ux_system_initialize.o [39]
-  .text              ro code   0x802'a8d8      0x10  nx_ip_periodic_timer_entry.o [29]
-  .text              ro code   0x802'a8e8      0x10  startup_stm32h753xx.o [34]
-  .rodata            const     0x802'a8f8       0xc  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'a904       0xc  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'a910       0xc  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'a91c       0xc  BKMAN2_1_Params_dyn_tables.o [5]
-  .rodata            const     0x802'a928       0xc  BKMAN2_1_Params_dyn_tables.o [5]
-  .rodata            const     0x802'a934       0xc  BKMAN2_1_Params_dyn_tables.o [5]
-  .rodata            const     0x802'a940       0xc  freemaster_serial.o [3]
-  .rodata            const     0x802'a94c       0xc  FreeMaster_thread.o [1]
-  .rodata            const     0x802'a958       0xc  FreeMaster_vars_map.o [1]
-  .rodata            const     0x802'a964       0xc  Main_thread.o [1]
-  .rodata            const     0x802'a970       0xc  MonitorVT100.o [7]
-  .rodata            const     0x802'a97c       0xc  MonitorVT100.o [7]
-  .rodata            const     0x802'a988       0xc  MonitorVT100.o [7]
-  .rodata            const     0x802'a994       0xc  MonitorVT100.o [7]
-  .rodata            const     0x802'a9a0       0xc  Net_common.o [4]
-  .rodata            const     0x802'a9ac       0xc  Net_Telnet.o [4]
-  .rodata            const     0x802'a9b8       0xc  NV_store.o [5]
-  .rodata            const     0x802'a9c4       0xc  NV_store.o [5]
-  .rodata            const     0x802'a9d0       0xc  nx_secure_tls_initialize.o [31]
-  .rodata            const     0x802'a9dc       0xc  nxd_dhcp_server.o [11]
-  .rodata            const     0x802'a9e8       0xc  Params_editor.o [7]
-  .rodata            const     0x802'a9f4       0xc  Params_editor.o [7]
-  .rodata            const     0x802'aa00       0xc  USB_descriptors_builder.o [6]
-  .rodata            const     0x802'aa0c       0xc  USB_descriptors_builder.o [6]
-  .rodata            const     0x802'aa18       0xc  USB_descriptors_builder.o [6]
-  .rodata            const     0x802'aa24       0xc  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'aa30       0xc  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'aa3c       0x8  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'aa44       0x8  freemaster_protocol.o [3]
-  .rodata            const     0x802'aa4c       0x8  FreeMaster_thread.o [1]
-  .rodata            const     0x802'aa54       0x8  IDLE_task.o [1]
-  .rodata            const     0x802'aa5c       0x8  Main.o [1]
-  .rodata            const     0x802'aa64       0x8  MonitorVT100.o [7]
-  .rodata            const     0x802'aa6c       0x8  NV_store.o [5]
-  .rodata            const     0x802'aa74       0x8  Params_editor.o [7]
-  .rodata            const     0x802'aa7c       0x8  Params_editor.o [7]
-  .rodata            const     0x802'aa84       0x8  Params_editor.o [7]
-  .rodata            const     0x802'aa8c       0x8  Params_editor.o [7]
-  .rodata            const     0x802'aa94       0x8  Params_editor.o [7]
-  .rodata            const     0x802'aa9c       0x8  Params_editor.o [7]
-  .rodata            const     0x802'aaa4       0x8  Params_editor.o [7]
-  .rodata            const     0x802'aaac       0x8  Params_editor.o [7]
-  .rodata            const     0x802'aab4       0x8  stm32h7xx_hal_uart_ex.o [33]
-  .rodata            const     0x802'aabc       0x8  stm32h7xx_hal_uart_ex.o [33]
-  .rodata            const     0x802'aac4       0x8  USB_device_init.o [6]
-  .rodata            const     0x802'aacc       0x8  USB_RNDIS_driver.o [6]
-  .rodata            const     0x802'aad4       0x4  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'aad8       0x4  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'aadc       0x4  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'aae0       0x4  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'aae4       0x4  BKMAN2_1_Params.o [5]
-  .rodata            const     0x802'aae8       0x4  freemaster_protocol.o [3]
-  .rodata            const     0x802'aaec       0x4  freemaster_protocol.o [3]
-  .rodata            const     0x802'aaf0       0x4  freemaster_protocol.o [3]
-  .rodata            const     0x802'aaf4       0x4  freemaster_protocol.o [3]
-  .rodata            const     0x802'aaf8       0x4  freemaster_protocol.o [3]
-  .rodata            const     0x802'aafc       0x4  freemaster_protocol.o [3]
-  .rodata            const     0x802'ab00       0x4  freemaster_protocol.o [3]
-  .rodata            const     0x802'ab04       0x4  freemaster_protocol.o [3]
-  .rodata            const     0x802'ab08       0x4  freemaster_protocol.o [3]
-  .rodata            const     0x802'ab0c       0x4  freemaster_protocol.o [3]
-  .rodata            const     0x802'ab10       0x4  freemaster_protocol.o [3]
-  .rodata            const     0x802'ab14       0x4  MonitorVT100.o [7]
-  .text              ro code   0x802'ab18       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab1c       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab20       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab24       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab28       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab2c       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab30       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab34       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab38       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab3c       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab40       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab44       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab48       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab4c       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab50       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab54       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab58       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab5c       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab60       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab64       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab68       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab6c       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab70       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab74       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab78       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab7c       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab80       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab84       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab88       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab8c       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab90       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab94       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab98       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ab9c       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'aba0       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'aba4       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'aba8       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'abac       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'abb0       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'abb4       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'82d4      0xd0  IDLE_task.o [1]
+  .text              ro code   0x802'83a4      0x48  U64ToFlt.o [44]
+  .text              ro code   0x802'83ec      0xd0  nx_ip_fragment_timeout_check.o [29]
+  .text              ro code   0x802'84bc      0xd0  tx_mutex_cleanup.o [38]
+  .text              ro code   0x802'858c      0xd0  ux_device_class_cdc_acm_bulkin_thread.o [40]
+  .text              ro code   0x802'865c      0xb8  nx_tcp_deferred_cleanup_check.o [29]
+  .text              ro code   0x802'8714      0xa4  nx_icmpv4_process_echo_request.o [29]
+  .rodata            const     0x802'87b8      0x98  Params_editor.o [7]
+  .rodata            const     0x802'8850      0x94  Params_editor.o [7]
+  .text              ro code   0x802'88e4      0x94  ux_dcd_stm32_function.o [42]
+  .text              ro code   0x802'8978       0x4  ux_dcd_stm32_frame_number_get.o [42]
+  .text              ro code   0x802'897c      0x7e  ux_dcd_stm32_transfer_request.o [42]
+  .text              ro code   0x802'89fa      0x4e  ux_dcd_stm32_endpoint_create.o [42]
+  .text              ro code   0x802'8a48      0x16  ux_dcd_stm32_endpoint_destroy.o [42]
+  .text              ro code   0x802'8a5e      0x1e  ux_dcd_stm32_endpoint_reset.o [42]
+  .text              ro code   0x802'8a7c      0x1e  ux_dcd_stm32_endpoint_status.o [42]
+  .text              ro code   0x802'8a9c      0x94  ux_device_class_storage_control_request.o [40]
+  .text              ro code   0x802'8b30      0x90  nx_tcp_packet_receive.o [29]
+  .text              ro code   0x802'8bc0      0x90  tx_event_flags_cleanup.o [38]
+  .rodata            const     0x802'8c50      0x88  MonitorVT100.o [7]
+  .text              ro code   0x802'8cd8      0x88  tx_byte_pool_cleanup.o [38]
+  .text              ro code   0x802'8d60      0x88  tx_semaphore_cleanup.o [38]
+  .text              ro code   0x802'8de8      0x88  ux_device_class_cdc_acm_initialize.o [40]
+  .text              ro code   0x802'8e70      0x82  nx_icmpv4_packet_process.o [29]
+  .text              ro code   0x802'8ef4      0x7c  nx_icmp_packet_receive.o [29]
+  .text              ro code   0x802'8f70      0x24  nx_icmp_packet_process.o [29]
+  .text              ro code   0x802'8f94      0x7a  nx_tcp_periodic_processing.o [29]
+  .text              ro code   0x802'9010      0x78  Main_thread.o [1]
+  .text              ro code   0x802'9088      0x52  Net_common.o [4]
+  .text              ro code   0x802'90dc      0x2c  nx_secure_tls_initialize.o [31]
+  .text              ro code   0x802'9108      0x78  nx_packet_pool_cleanup.o [29]
+  .text              ro code   0x802'9180      0x74  ux_device_class_cdc_acm_bulkout_thread.o [40]
+  .rodata            const     0x802'91f4      0x70  BKMAN2_1_Params_dyn_tables.o [5]
+  .text              ro code   0x802'9264      0x70  nx_udp_receive_cleanup.o [29]
+  .text              ro code   0x802'92d4      0x60  ux_device_class_rndis_interrupt_thread.o [40]
+  .rodata            const     0x802'9334      0x5c  MonitorVT100.o [7]
+  .rodata            const     0x802'9390      0x5c  USB_RNDIS_driver.o [6]
+  .text              ro code   0x802'93ec      0x5c  tx_thread_shell_entry.o [38]
+  .text              ro code   0x802'9448      0x58  ux_device_class_rndis_deactivate.o [40]
+  .text              ro code   0x802'94a0      0x58  ux_device_class_storage_entry.o [40]
+  .text              ro code   0x802'94f8      0x24  ux_device_class_storage_uninitialize.o [40]
+  .text              ro code   0x802'951c      0x26  ux_device_class_storage_activate.o [40]
+  .text              ro code   0x802'9542      0x36  ux_device_class_storage_deactivate.o [40]
+  .text              ro code   0x802'9578      0x52  ux_device_class_rndis_entry.o [40]
+  .rodata            const     0x802'95cc      0x50  iar_Stoulx.o [43]
+  .rodata            const     0x802'961c      0x50  iar_Stoullx.o [43]
+  .text              ro code   0x802'966c      0x4e  ux_device_class_cdc_acm_entry.o [40]
+  .text              ro code   0x802'96ba      0x24  ux_device_class_cdc_acm_unitialize.o [40]
+  .text              ro code   0x802'96de      0x1c  ux_device_class_cdc_acm_activate.o [40]
+  .text              ro code   0x802'96fa      0x4c  ux_device_class_cdc_acm_deactivate.o [40]
+  .rodata            const     0x802'9748      0x4c  MonitorVT100.o [7]
+  .rodata            const     0x802'9794      0x4c  Params_editor.o [7]
+  .rodata            const     0x802'97e0      0x4c  stm32h7xx_hal_fdcan.o [33]
+  .text              ro code   0x802'982c      0x4c  App_ISRs.o [1]
+  .text              ro code   0x802'9878      0x4a  ux_device_class_rndis_write.o [40]
+  .rodata            const     0x802'98c4      0x48  MonitorVT100.o [7]
+  .rodata            const     0x802'990c      0x44  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'9950      0x48  strto64.o [44]
+  .rodata            const     0x802'9998      0x44  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'99dc      0x44  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'9a20      0x40  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'9a60      0x3c  logger.o [1]
+  .rodata            const     0x802'9a9c      0x3c  USB_RNDIS_driver.o [6]
+  .text              ro code   0x802'9ad8      0x3c  tx_thread_timeout.o [38]
+  .text              ro code   0x802'9b14      0x3a  nx_tcp_queue_process.o [29]
+  .rodata            const     0x802'9b50      0x38  BKMAN2_1_Params.o [5]
+  .text              ro code   0x802'9b88      0x38  nx_arp_queue_process.o [29]
+  .text              ro code   0x802'9bc0      0x38  zero_init3.o [45]
+  .rodata            const     0x802'9bf8      0x34  NV_store.o [5]
+  .rodata            const     0x802'9c2c      0x34  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'9c60      0x34  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'9c94      0x30  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'9cc4      0x30  logger.o [1]
+  .text              ro code   0x802'9cf4      0x2e  nx_icmp_queue_process.o [29]
+  .rodata            const     0x802'9d24      0x2c  Net_common.o [4]
+  .rodata            const     0x802'9d50      0x2c  Net_Telnet.o [4]
+  .rodata            const     0x802'9d7c      0x28  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'9da4      0x28  ux_device_class_cdc_acm_ioctl.o [40]
+  .rodata            const     0x802'9dcc      0x28  ux_device_class_cdc_acm_ioctl.o [40]
+  .rodata            const     0x802'9df4      0x28  ux_device_class_rndis_initialize.o [40]
+  .rodata            const     0x802'9e1c      0x28  xscanffull_nomb.o [43]
+  .text              ro code   0x802'9e44      0x28  data_init.o [45]
+  .rodata            const     0x802'9e6c      0x24  MonitorVT100.o [7]
+  .rodata            const     0x802'9e90      0x24  MonitorVT100.o [7]
+  .rodata            const     0x802'9eb4      0x24  Net_Telnet.o [4]
+  .rodata            const     0x802'9ed8      0x24  Net_Telnet.o [4]
+  .rodata            const     0x802'9efc      0x24  NV_store.o [5]
+  .rodata            const     0x802'9f20      0x24  ux_device_class_cdc_acm_initialize.o [40]
+  .rodata            const     0x802'9f44      0x24  ux_device_class_cdc_acm_ioctl.o [40]
+  .rodata            const     0x802'9f68      0x24  ux_device_class_rndis_initialize.o [40]
+  .rodata            const     0x802'9f8c      0x24  ux_device_class_rndis_initialize.o [40]
+  .rodata            const     0x802'9fb0      0x24  ux_device_class_rndis_initialize.o [40]
+  .rodata            const     0x802'9fd4      0x24  xscanffull_nomb.o [43]
+  .text              ro code   0x802'9ff8      0x22  fpinit_M.o [44]
+  .iar.init_table    const     0x802'a01c      0x28  - Linker created -
+  .rodata            const     0x802'a044      0x20  BKMAN2_1_FreeMaster_vars.o [5]
+  .rodata            const     0x802'a064      0x20  FreeMaster_vars_map.o [1]
+  .rodata            const     0x802'a084      0x20  MonitorVT100.o [7]
+  .rodata            const     0x802'a0a4      0x20  NV_store.o [5]
+  .rodata            const     0x802'a0c4      0x20  nxd_telnet_server.o [26]
+  .rodata            const     0x802'a0e4      0x20  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a104      0x20  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a124      0x20  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a144      0x20  ux_device_class_cdc_acm_initialize.o [40]
+  .rodata            const     0x802'a164      0x20  ux_device_class_rndis_initialize.o [40]
+  .rodata            const     0x802'a184      0x20  ux_device_stack_initialize.o [39]
+  .rodata            const     0x802'a1a4      0x20  ux_network_driver.o [41]
+  .text              ro code   0x802'a1c4      0x1e  cmain.o [45]
+  .text              ro code   0x802'a1e2       0x4  low_level_init.o [43]
+  .text              ro code   0x802'a1e6       0x4  exit.o [43]
+  .text              ro code   0x802'a1ec       0xe  cexit.o [45]
+  .rodata            const     0x802'a1fc      0x1c  logger.o [1]
+  .rodata            const     0x802'a218      0x1c  MonitorVT100.o [7]
+  .rodata            const     0x802'a234      0x1c  Net_Telnet.o [4]
+  .rodata            const     0x802'a250      0x1c  Net_Telnet.o [4]
+  .rodata            const     0x802'a26c      0x1c  Net_Telnet.o [4]
+  .rodata            const     0x802'a288      0x1c  nxd_dhcp_server.o [11]
+  .rodata            const     0x802'a2a4      0x1c  nxd_dhcp_server.o [11]
+  .rodata            const     0x802'a2c0      0x1c  nxd_telnet_server.o [26]
+  .rodata            const     0x802'a2dc      0x1c  Params_editor.o [7]
+  .rodata            const     0x802'a2f8      0x1c  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a314      0x1c  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a330      0x1c  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a34c      0x1c  ux_device_class_rndis_initialize.o [40]
+  .rodata            const     0x802'a368      0x1c  ux_device_class_rndis_initialize.o [40]
+  .rodata            const     0x802'a384      0x1c  ux_network_driver.o [41]
+  .text              ro code   0x802'a3a0      0x1c  cstartup_M.o [45]
+  .rodata            const     0x802'a3bc      0x18  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'a3d4      0x18  freemaster_protocol.o [3]
+  .rodata            const     0x802'a3ec      0x18  FreeMaster_thread.o [1]
+  .rodata            const     0x802'a404      0x18  MonitorVT100.o [7]
+  .rodata            const     0x802'a41c      0x18  Net_common.o [4]
+  .rodata            const     0x802'a434      0x18  Net_Telnet.o [4]
+  .rodata            const     0x802'a44c      0x18  Net_Telnet.o [4]
+  .rodata            const     0x802'a464      0x18  Net_Telnet.o [4]
+  .rodata            const     0x802'a47c      0x18  Net_Telnet.o [4]
+  .rodata            const     0x802'a494      0x18  Net_Telnet.o [4]
+  .rodata            const     0x802'a4ac      0x18  Net_Telnet.o [4]
+  .rodata            const     0x802'a4c4      0x18  NV_store.o [5]
+  .rodata            const     0x802'a4dc      0x18  nxd_dhcp_server.o [11]
+  .rodata            const     0x802'a4f4      0x18  nxd_dhcp_server.o [11]
+  .rodata            const     0x802'a50c      0x18  nxd_telnet_server.o [26]
+  .rodata            const     0x802'a524      0x18  stm32h7xx_hal_uart.o [33]
+  .rodata            const     0x802'a53c      0x18  tx_iar.o [37]
+  .rodata            const     0x802'a554      0x18  tx_iar.o [37]
+  .rodata            const     0x802'a56c      0x18  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a584      0x18  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a59c      0x18  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a5b4      0x18  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a5cc      0x18  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a5e4      0x18  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a5fc      0x18  ux_device_class_storage_initialize.o [40]
+  .rodata            const     0x802'a614      0x14  BKMAN2_1_FreeMaster_vars.o [5]
+  .rodata            const     0x802'a628      0x14  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'a63c      0x14  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'a650      0x14  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'a664      0x14  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'a678      0x14  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'a68c      0x14  freemaster_protocol.o [3]
+  .rodata            const     0x802'a6a0      0x14  freemaster_protocol.o [3]
+  .rodata            const     0x802'a6b4      0x14  freemaster_rec.o [3]
+  .rodata            const     0x802'a6c8      0x14  FreeMaster_thread.o [1]
+  .rodata            const     0x802'a6dc      0x14  logger.o [1]
+  .rodata            const     0x802'a6f0      0x14  logger.o [1]
+  .rodata            const     0x802'a704      0x14  Main_thread.o [1]
+  .rodata            const     0x802'a718      0x14  MonitorVT100.o [7]
+  .rodata            const     0x802'a72c      0x14  MonitorVT100.o [7]
+  .rodata            const     0x802'a740      0x14  MonitorVT100.o [7]
+  .rodata            const     0x802'a754      0x14  MonitorVT100.o [7]
+  .rodata            const     0x802'a768      0x14  nxd_dhcp_server.o [11]
+  .rodata            const     0x802'a77c      0x14  nxd_dhcp_server.o [11]
+  .rodata            const     0x802'a790      0x14  nxd_telnet_server.o [26]
+  .rodata            const     0x802'a7a4      0x14  Params_editor.o [7]
+  .rodata            const     0x802'a7b8      0x14  Params_editor.o [7]
+  .rodata            const     0x802'a7cc      0x14  Params_editor.o [7]
+  .rodata            const     0x802'a7e0      0x14  tx_timer_initialize.o [38]
+  .rodata            const     0x802'a7f4      0x14  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a808      0x14  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a81c      0x14  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a830      0x14  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a844      0x14  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a858      0x10  BKMAN2_1_FreeMaster_vars.o [5]
+  .rodata            const     0x802'a868      0x10  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'a878      0x10  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'a888      0x10  FreeMaster_thread.o [1]
+  .rodata            const     0x802'a898      0x10  FreeMaster_vars_map.o [1]
+  .rodata            const     0x802'a8a8      0x10  Mem_man.o [1]
+  .rodata            const     0x802'a8b8      0x10  MonitorVT100.o [7]
+  .rodata            const     0x802'a8c8      0x10  Net_Telnet.o [4]
+  .rodata            const     0x802'a8d8      0x10  Net_Telnet.o [4]
+  .rodata            const     0x802'a8e8      0x10  nx_icmpv6_send_ns.o [29]
+  .rodata            const     0x802'a8f8      0x10  nx_icmpv6_send_rs.o [29]
+  .rodata            const     0x802'a908      0x10  system_stm32h7xx.o [32]
+  .rodata            const     0x802'a918      0x10  USB_CDC_driver.o [6]
+  .rodata            const     0x802'a928      0x10  USB_CDC_driver.o [6]
+  .rodata            const     0x802'a938      0x10  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a948      0x10  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a958      0x10  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'a968      0x10  ux_system_initialize.o [39]
+  .text              ro code   0x802'a978      0x10  nx_ip_periodic_timer_entry.o [29]
+  .text              ro code   0x802'a988      0x10  startup_stm32h753xx.o [34]
+  .rodata            const     0x802'a998       0xc  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'a9a4       0xc  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'a9b0       0xc  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'a9bc       0xc  BKMAN2_1_Params_dyn_tables.o [5]
+  .rodata            const     0x802'a9c8       0xc  BKMAN2_1_Params_dyn_tables.o [5]
+  .rodata            const     0x802'a9d4       0xc  BKMAN2_1_Params_dyn_tables.o [5]
+  .rodata            const     0x802'a9e0       0xc  freemaster_serial.o [3]
+  .rodata            const     0x802'a9ec       0xc  FreeMaster_thread.o [1]
+  .rodata            const     0x802'a9f8       0xc  FreeMaster_vars_map.o [1]
+  .rodata            const     0x802'aa04       0xc  Main_thread.o [1]
+  .rodata            const     0x802'aa10       0xc  MonitorVT100.o [7]
+  .rodata            const     0x802'aa1c       0xc  MonitorVT100.o [7]
+  .rodata            const     0x802'aa28       0xc  MonitorVT100.o [7]
+  .rodata            const     0x802'aa34       0xc  MonitorVT100.o [7]
+  .rodata            const     0x802'aa40       0xc  Net_common.o [4]
+  .rodata            const     0x802'aa4c       0xc  Net_Telnet.o [4]
+  .rodata            const     0x802'aa58       0xc  NV_store.o [5]
+  .rodata            const     0x802'aa64       0xc  NV_store.o [5]
+  .rodata            const     0x802'aa70       0xc  nx_secure_tls_initialize.o [31]
+  .rodata            const     0x802'aa7c       0xc  nxd_dhcp_server.o [11]
+  .rodata            const     0x802'aa88       0xc  Params_editor.o [7]
+  .rodata            const     0x802'aa94       0xc  Params_editor.o [7]
+  .rodata            const     0x802'aaa0       0xc  USB_descriptors_builder.o [6]
+  .rodata            const     0x802'aaac       0xc  USB_descriptors_builder.o [6]
+  .rodata            const     0x802'aab8       0xc  USB_descriptors_builder.o [6]
+  .rodata            const     0x802'aac4       0xc  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'aad0       0xc  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'aadc       0x8  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'aae4       0x8  freemaster_protocol.o [3]
+  .rodata            const     0x802'aaec       0x8  FreeMaster_thread.o [1]
+  .rodata            const     0x802'aaf4       0x8  IDLE_task.o [1]
+  .rodata            const     0x802'aafc       0x8  Main.o [1]
+  .rodata            const     0x802'ab04       0x8  MonitorVT100.o [7]
+  .rodata            const     0x802'ab0c       0x8  NV_store.o [5]
+  .rodata            const     0x802'ab14       0x8  Params_editor.o [7]
+  .rodata            const     0x802'ab1c       0x8  Params_editor.o [7]
+  .rodata            const     0x802'ab24       0x8  Params_editor.o [7]
+  .rodata            const     0x802'ab2c       0x8  Params_editor.o [7]
+  .rodata            const     0x802'ab34       0x8  Params_editor.o [7]
+  .rodata            const     0x802'ab3c       0x8  Params_editor.o [7]
+  .rodata            const     0x802'ab44       0x8  Params_editor.o [7]
+  .rodata            const     0x802'ab4c       0x8  Params_editor.o [7]
+  .rodata            const     0x802'ab54       0x8  stm32h7xx_hal_uart_ex.o [33]
+  .rodata            const     0x802'ab5c       0x8  stm32h7xx_hal_uart_ex.o [33]
+  .rodata            const     0x802'ab64       0x8  USB_device_init.o [6]
+  .rodata            const     0x802'ab6c       0x8  USB_RNDIS_driver.o [6]
+  .rodata            const     0x802'ab74       0x4  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'ab78       0x4  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'ab7c       0x4  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'ab80       0x4  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'ab84       0x4  BKMAN2_1_Params.o [5]
+  .rodata            const     0x802'ab88       0x4  freemaster_protocol.o [3]
+  .rodata            const     0x802'ab8c       0x4  freemaster_protocol.o [3]
+  .rodata            const     0x802'ab90       0x4  freemaster_protocol.o [3]
+  .rodata            const     0x802'ab94       0x4  freemaster_protocol.o [3]
+  .rodata            const     0x802'ab98       0x4  freemaster_protocol.o [3]
+  .rodata            const     0x802'ab9c       0x4  freemaster_protocol.o [3]
+  .rodata            const     0x802'aba0       0x4  freemaster_protocol.o [3]
+  .rodata            const     0x802'aba4       0x4  freemaster_protocol.o [3]
+  .rodata            const     0x802'aba8       0x4  freemaster_protocol.o [3]
+  .rodata            const     0x802'abac       0x4  freemaster_protocol.o [3]
+  .rodata            const     0x802'abb0       0x4  freemaster_protocol.o [3]
+  .rodata            const     0x802'abb4       0x4  MonitorVT100.o [7]
   .text              ro code   0x802'abb8       0x4  startup_stm32h753xx.o [34]
   .text              ro code   0x802'abbc       0x4  startup_stm32h753xx.o [34]
   .text              ro code   0x802'abc0       0x4  startup_stm32h753xx.o [34]
@@ -2792,11 +2755,51 @@ initialize by copy { rw };
   .text              ro code   0x802'ad2c       0x4  startup_stm32h753xx.o [34]
   .text              ro code   0x802'ad30       0x4  startup_stm32h753xx.o [34]
   .text              ro code   0x802'ad34       0x4  startup_stm32h753xx.o [34]
-  .text              ro code   0x802'ad38       0x0  cstart_clearlocks.o [45]
-  .rodata            const     0x802'ad38       0x0  zero_init3.o [45]
-  .rodata            const     0x802'ad38       0x0  lz77_init_single.o [45]
-  Initializer bytes  const     0x802'ad38     0x228  <for P2-1>
-                             - 0x802'af60  0x2'acc8
+  .text              ro code   0x802'ad38       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad3c       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad40       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad44       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad48       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad4c       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad50       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad54       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad58       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad5c       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad60       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad64       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad68       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad6c       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad70       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad74       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad78       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad7c       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad80       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad84       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad88       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad8c       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad90       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad94       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad98       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ad9c       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ada0       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ada4       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'ada8       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'adac       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'adb0       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'adb4       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'adb8       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'adbc       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'adc0       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'adc4       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'adc8       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'adcc       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'add0       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'add4       0x4  startup_stm32h753xx.o [34]
+  .text              ro code   0x802'add8       0x0  cstart_clearlocks.o [45]
+  .rodata            const     0x802'add8       0x0  zero_init3.o [45]
+  .rodata            const     0x802'add8       0x0  lz77_init_single.o [45]
+  Initializer bytes  const     0x802'add8     0x227  <for P2-1>
+                             - 0x802'afff  0x2'ad67
 
 "P2", part 1 of 3:                            0x412
   P2-1                        0x2400'0000     0x412  <Init block>
@@ -2839,7 +2842,7 @@ initialize by copy { rw };
     .data            inited   0x2400'0411       0x1  USB_MSC_driver.o [6]
                             - 0x2400'0412     0x412
 
-"P2", part 2 of 3:                         0x2'c1ac
+"P2", part 2 of 3:                         0x2'c1b0
   .bss               zero     0x2400'0414  0x1'f7a0  Net_common.o [4]
   .bss               zero     0x2401'fbb4    0x2a80  logger.o [1]
   .bss               zero     0x2402'2634    0x2044  USB_RNDIS_driver.o [6]
@@ -2926,33 +2929,33 @@ initialize by copy { rw };
   .bss               zero     0x2402'c468       0x4  freemaster_tsa.o [3]
   .bss               zero     0x2402'c46c       0x4  freemaster_tsa.o [3]
   .bss               zero     0x2402'c470       0x4  IDLE_task.o [1]
-  .bss               zero     0x2402'c474       0x4  Mem_man.o [1]
+  .bss               zero     0x2402'c474       0x4  IDLE_task.o [1]
   .bss               zero     0x2402'c478       0x4  Mem_man.o [1]
-  .bss               zero     0x2402'c47c       0x4  Net_Telnet.o [4]
-  .bss               zero     0x2402'c480       0x4  nx_ip_initialize.o [29]
+  .bss               zero     0x2402'c47c       0x4  Mem_man.o [1]
+  .bss               zero     0x2402'c480       0x4  Net_Telnet.o [4]
   .bss               zero     0x2402'c484       0x4  nx_ip_initialize.o [29]
-  .bss               zero     0x2402'c488       0x4  nx_packet_pool_initialize.o [29]
+  .bss               zero     0x2402'c488       0x4  nx_ip_initialize.o [29]
   .bss               zero     0x2402'c48c       0x4  nx_packet_pool_initialize.o [29]
-  .bss               zero     0x2402'c490       0x4  nx_secure_tls_initialize.o [31]
+  .bss               zero     0x2402'c490       0x4  nx_packet_pool_initialize.o [29]
   .bss               zero     0x2402'c494       0x4  nx_secure_tls_initialize.o [31]
-  .bss               zero     0x2402'c498       0x4  nx_system_initialize.o [29]
+  .bss               zero     0x2402'c498       0x4  nx_secure_tls_initialize.o [31]
   .bss               zero     0x2402'c49c       0x4  nx_system_initialize.o [29]
   .bss               zero     0x2402'c4a0       0x4  nx_system_initialize.o [29]
   .bss               zero     0x2402'c4a4       0x4  nx_system_initialize.o [29]
   .bss               zero     0x2402'c4a8       0x4  nx_system_initialize.o [29]
-  .bss               zero     0x2402'c4ac       0x4  nx_tcp_initialize.o [29]
+  .bss               zero     0x2402'c4ac       0x4  nx_system_initialize.o [29]
   .bss               zero     0x2402'c4b0       0x4  nx_tcp_initialize.o [29]
   .bss               zero     0x2402'c4b4       0x4  nx_tcp_initialize.o [29]
   .bss               zero     0x2402'c4b8       0x4  nx_tcp_initialize.o [29]
-  .bss               zero     0x2402'c4bc       0x4  stm32h7xx_hal.o [33]
-  .bss               zero     0x2402'c4c0       0x4  tx_iar.o [37]
+  .bss               zero     0x2402'c4bc       0x4  nx_tcp_initialize.o [29]
+  .bss               zero     0x2402'c4c0       0x4  stm32h7xx_hal.o [33]
   .bss               zero     0x2402'c4c4       0x4  tx_iar.o [37]
   .bss               zero     0x2402'c4c8       0x4  tx_iar.o [37]
   .bss               zero     0x2402'c4cc       0x4  tx_iar.o [37]
   .bss               zero     0x2402'c4d0       0x4  tx_iar.o [37]
   .bss               zero     0x2402'c4d4       0x4  tx_iar.o [37]
   .bss               zero     0x2402'c4d8       0x4  tx_iar.o [37]
-  .bss               zero     0x2402'c4dc       0x4  tx_initialize_high_level.o [38]
+  .bss               zero     0x2402'c4dc       0x4  tx_iar.o [37]
   .bss               zero     0x2402'c4e0       0x4  tx_initialize_high_level.o [38]
   .bss               zero     0x2402'c4e4       0x4  tx_initialize_high_level.o [38]
   .bss               zero     0x2402'c4e8       0x4  tx_initialize_high_level.o [38]
@@ -2961,7 +2964,7 @@ initialize by copy { rw };
   .bss               zero     0x2402'c4f4       0x4  tx_initialize_high_level.o [38]
   .bss               zero     0x2402'c4f8       0x4  tx_initialize_high_level.o [38]
   .bss               zero     0x2402'c4fc       0x4  tx_initialize_high_level.o [38]
-  .bss               zero     0x2402'c500       0x4  tx_thread_initialize.o [38]
+  .bss               zero     0x2402'c500       0x4  tx_initialize_high_level.o [38]
   .bss               zero     0x2402'c504       0x4  tx_thread_initialize.o [38]
   .bss               zero     0x2402'c508       0x4  tx_thread_initialize.o [38]
   .bss               zero     0x2402'c50c       0x4  tx_thread_initialize.o [38]
@@ -2972,7 +2975,7 @@ initialize by copy { rw };
   .bss               zero     0x2402'c520       0x4  tx_thread_initialize.o [38]
   .bss               zero     0x2402'c524       0x4  tx_thread_initialize.o [38]
   .bss               zero     0x2402'c528       0x4  tx_thread_initialize.o [38]
-  .bss               zero     0x2402'c52c       0x4  tx_timer_initialize.o [38]
+  .bss               zero     0x2402'c52c       0x4  tx_thread_initialize.o [38]
   .bss               zero     0x2402'c530       0x4  tx_timer_initialize.o [38]
   .bss               zero     0x2402'c534       0x4  tx_timer_initialize.o [38]
   .bss               zero     0x2402'c538       0x4  tx_timer_initialize.o [38]
@@ -2985,7 +2988,7 @@ initialize by copy { rw };
   .bss               zero     0x2402'c554       0x4  tx_timer_initialize.o [38]
   .bss               zero     0x2402'c558       0x4  tx_timer_initialize.o [38]
   .bss               zero     0x2402'c55c       0x4  tx_timer_initialize.o [38]
-  .bss               zero     0x2402'c560       0x4  USB_descriptors_builder.o [6]
+  .bss               zero     0x2402'c560       0x4  tx_timer_initialize.o [38]
   .bss               zero     0x2402'c564       0x4  USB_descriptors_builder.o [6]
   .bss               zero     0x2402'c568       0x4  USB_descriptors_builder.o [6]
   .bss               zero     0x2402'c56c       0x4  USB_descriptors_builder.o [6]
@@ -2998,49 +3001,51 @@ initialize by copy { rw };
   .bss               zero     0x2402'c588       0x4  USB_descriptors_builder.o [6]
   .bss               zero     0x2402'c58c       0x4  USB_descriptors_builder.o [6]
   .bss               zero     0x2402'c590       0x4  USB_descriptors_builder.o [6]
-  .bss               zero     0x2402'c594       0x4  ux_device_stack_initialize.o [39]
-  .bss               zero     0x2402'c598       0x4  ux_network_driver.o [41]
-  .bss               zero     0x2402'c59c       0x4  ux_system_initialize.o [39]
-  .bss               zero     0x2402'c5a0       0x4  xfail_s.o [43]
-  .bss               zero     0x2402'c5a4       0x4  xgetmemchunk.o [43]
-  .bss               zero     0x2402'c5a8       0x2  FreeMaster_thread.o [1]
-  .bss               zero     0x2402'c5aa       0x2  FreeMaster_thread.o [1]
-  .bss               zero     0x2402'c5ac       0x2  MonitorVT100.o [7]
-  .bss               zero     0x2402'c5ae       0x2  USB_CDC_driver.o [6]
-  .bss               zero     0x2402'c5b0       0x2  USB_descriptors_builder.o [6]
-  .bss               zero     0x2402'c5b2       0x1  freemaster_appcmd.o [3]
-  .bss               zero     0x2402'c5b3       0x1  freemaster_appcmd.o [3]
-  .bss               zero     0x2402'c5b4       0x1  freemaster_appcmd.o [3]
-  .bss               zero     0x2402'c5b5       0x1  freemaster_serial.o [3]
-  .bss               zero     0x2402'c5b6       0x1  freemaster_serial.o [3]
-  .bss               zero     0x2402'c5b7       0x1  freemaster_serial.o [3]
-  .bss               zero     0x2402'c5b8       0x1  FreeMaster_thread.o [1]
-  .bss               zero     0x2402'c5b9       0x1  FreeMaster_thread.o [1]
-  .bss               zero     0x2402'c5ba       0x1  NV_store.o [5]
-  .bss               zero     0x2402'c5bb       0x1  Params_editor.o [7]
-  .bss               zero     0x2402'c5bc       0x1  USB_RNDIS_driver.o [6]
-  .bss               zero     0x2402'c5bd       0x1  USB_RNDIS_driver.o [6]
-  .bss               zero     0x2402'c5be       0x1  USB_RNDIS_driver.o [6]
-                            - 0x2402'c5bf  0x2'c1ab
+  .bss               zero     0x2402'c594       0x4  USB_descriptors_builder.o [6]
+  .bss               zero     0x2402'c598       0x4  ux_device_stack_initialize.o [39]
+  .bss               zero     0x2402'c59c       0x4  ux_network_driver.o [41]
+  .bss               zero     0x2402'c5a0       0x4  ux_system_initialize.o [39]
+  .bss               zero     0x2402'c5a4       0x4  xfail_s.o [43]
+  .bss               zero     0x2402'c5a8       0x4  xgetmemchunk.o [43]
+  .bss               zero     0x2402'c5ac       0x2  FreeMaster_thread.o [1]
+  .bss               zero     0x2402'c5ae       0x2  FreeMaster_thread.o [1]
+  .bss               zero     0x2402'c5b0       0x2  MonitorVT100.o [7]
+  .bss               zero     0x2402'c5b2       0x2  USB_CDC_driver.o [6]
+  .bss               zero     0x2402'c5b4       0x2  USB_descriptors_builder.o [6]
+  .bss               zero     0x2402'c5b6       0x1  freemaster_appcmd.o [3]
+  .bss               zero     0x2402'c5b7       0x1  freemaster_appcmd.o [3]
+  .bss               zero     0x2402'c5b8       0x1  freemaster_appcmd.o [3]
+  .bss               zero     0x2402'c5b9       0x1  freemaster_serial.o [3]
+  .bss               zero     0x2402'c5ba       0x1  freemaster_serial.o [3]
+  .bss               zero     0x2402'c5bb       0x1  freemaster_serial.o [3]
+  .bss               zero     0x2402'c5bc       0x1  FreeMaster_thread.o [1]
+  .bss               zero     0x2402'c5bd       0x1  FreeMaster_thread.o [1]
+  .bss               zero     0x2402'c5be       0x1  NV_store.o [5]
+  .bss               zero     0x2402'c5bf       0x1  Params_editor.o [7]
+  .bss               zero     0x2402'c5c0       0x1  USB_RNDIS_driver.o [6]
+  .bss               zero     0x2402'c5c1       0x1  USB_RNDIS_driver.o [6]
+  .bss               zero     0x2402'c5c2       0x1  USB_RNDIS_driver.o [6]
+                            - 0x2402'c5c3  0x2'c1af
 
 "P2", part 3 of 3:                            0x600
-  CSTACK                      0x2402'c5c0     0x400  <Block>
-    CSTACK           uninit   0x2402'c5c0     0x400  <Block tail>
-  HEAP                        0x2402'c9c0     0x200  <Block>
-    HEAP             uninit   0x2402'c9c0     0x200  <Block tail>
-                            - 0x2402'cbc0     0x600
+  CSTACK                      0x2402'c5c8     0x400  <Block>
+    CSTACK           uninit   0x2402'c5c8     0x400  <Block tail>
+  HEAP                        0x2402'c9c8     0x200  <Block>
+    HEAP             uninit   0x2402'c9c8     0x200  <Block tail>
+                            - 0x2402'cbc8     0x600
 
 "P3":                                          0x10
-  FREE_MEM           zero     0x2402'cbc0      0x10  tx_initialize_low_level.o [35]
-                            - 0x2402'cbd0      0x10
+  FREE_MEM           zero     0x2402'cbc8      0x10  tx_initialize_low_level.o [35]
+                            - 0x2402'cbd8      0x10
 
 Unused ranges:
 
          From           To      Size
          ----           --      ----
-   0x802'af60   0x80f'ffff  0xd'50a0
+   0x802'afff   0x80f'ffff  0xd'5001
   0x2400'0412  0x2400'0413       0x2
-  0x2402'cbd0  0x2407'ffff  0x5'3430
+  0x2402'c5c4  0x2402'c5c7       0x4
+  0x2402'cbd8  0x2407'ffff  0x5'3428
 
 
 *******************************************************************************
@@ -3050,13 +3055,13 @@ Unused ranges:
           Address      Size
           -------      ----
 Zero (__iar_zero_init3)
-    2 destination ranges, total size 0x2'c1bb:
-          0x2400'0414  0x2'c1ab
-          0x2402'cbc0      0x10
+    2 destination ranges, total size 0x2'c1bf:
+          0x2400'0414  0x2'c1af
+          0x2402'cbc8      0x10
 
 Copy/lz77 (__iar_lz77_init_single3)
-    1 source range, total size 0x228 (52% of destination):
-           0x802'ad38     0x228
+    1 source range, total size 0x227 (52% of destination):
+           0x802'add8     0x227
     1 destination range, total size 0x412:
           0x2400'0000     0x412
 
@@ -3076,8 +3081,8 @@ d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Examp
     App_ISRs.o                                                  76
     App_utils.o                                                 76
     FreeMaster_thread.o                                        768       80       38
-    FreeMaster_vars_map.o                                       16       30
-    IDLE_task.o                                                152        8      712
+    FreeMaster_vars_map.o                                       16       64
+    IDLE_task.o                                                208        8      716
     Main.o                                                     624        8    1'344
     Main_thread.o                                              120       32
     Mem_man.o                                                  120       16       60
@@ -3085,7 +3090,7 @@ d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Examp
     Time_utils.o                                               132
     logger.o                                                   628      176   10'948
     --------------------------------------------------------------------------------
-    Total:                                                   2'734      350   13'102
+    Total:                                                   2'790      384   13'106
 
 d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Example1\Out\Obj\Azure_RTOS_Example1\App\Core: [2]
     adc.o                                                    1'096               304
@@ -3116,9 +3121,9 @@ d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Examp
 d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Example1\Out\Obj\Azure_RTOS_Example1\App\Network: [4]
     Net_Telnet.o                                             1'216      407    3'296
     Net_common.o                                                82       80  128'988
-    Net_utils.o                                                156        7       12
+    Net_utils.o                                                156        6       12
     --------------------------------------------------------------------------------
-    Total:                                                   1'454      494  132'296
+    Total:                                                   1'454      493  132'296
 
 d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Example1\Out\Obj\Azure_RTOS_Example1\App\Parameters: [5]
     BKMAN2_1_FreeMaster_vars.o                                  16       70
@@ -3408,7 +3413,7 @@ d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Examp
     Total:                                                     520       20       84
 
 d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Example1\Out\Obj\Azure_RTOS_Example1\STM32H7xx_HAL\Src: [33]
-    stm32h7xx_hal.o                                            260        3        9
+    stm32h7xx_hal.o                                            260        4        9
     stm32h7xx_hal_adc.o                                      2'512
     stm32h7xx_hal_adc_ex.o                                     388
     stm32h7xx_hal_cortex.o                                     240
@@ -3432,7 +3437,7 @@ d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Examp
     stm32h7xx_ll_sdmmc.o                                     1'900
     stm32h7xx_ll_usb.o                                       3'852
     --------------------------------------------------------------------------------
-    Total:                                                  35'476      119        9
+    Total:                                                  35'476      120        9
 
 d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Example1\Out\Obj\Azure_RTOS_Example1\Startup: [34]
     startup_stm32h753xx.o                                    1'224
@@ -3616,7 +3621,7 @@ d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Examp
     ux_device_class_rndis_control_request.o                    228
     ux_device_class_rndis_deactivate.o                          88
     ux_device_class_rndis_entry.o                               82
-    ux_device_class_rndis_initialize.o                         708      302      124
+    ux_device_class_rndis_initialize.o                         708      301      124
     ux_device_class_rndis_interrupt_thread.o                    96
     ux_device_class_rndis_msg_initialize.o                     208
     ux_device_class_rndis_msg_keep_alive.o                      72
@@ -3647,7 +3652,7 @@ d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Examp
     ux_device_class_storage_verify.o                             8
     ux_device_class_storage_write.o                            428
     --------------------------------------------------------------------------------
-    Total:                                                   8'956      544      188
+    Total:                                                   8'956      543      188
 
 d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Example1\Out\Obj\Azure_RTOS_Example1\UsbX\common\usbx_network: [41]
     ux_network_driver.o                                      1'206       60      964
@@ -3687,7 +3692,7 @@ dl7M_tlf.a: [43]
     ispunct.o                                                   20
     isspace.o                                                   20
     low_level_init.o                                             4
-    rand.o                                                     156       74      140
+    rand.o                                                     156       75      140
     snprintf.o                                                  68
     sprintf.o                                                   64
     sscanf.o                                                    40
@@ -3697,7 +3702,7 @@ dl7M_tlf.a: [43]
     xfail_s.o                                                   64                 4
     xfiles.o                                                     4                32
     xgetmemchunk.o                                              44                 4
-    xlocale_c.o                                                124       73      128
+    xlocale_c.o                                                124       72      128
     xlockref.o                                                  20
     xprintffull_nomb.o                                       3'890
     xscanffull_nomb.o                                        3'452       76
@@ -3718,13 +3723,14 @@ m7M_tlv.a: [44]
     DblToU32.o                                                  14
     S32ToDbl.o                                                  14
     U32ToDbl.o                                                  14
+    U64ToFlt.o                                                  72
     fpinit_M.o                                                  34
     frexp.o                                                    136
     ldexp.o                                                    260
     math_wrappers64.o                                           14
     strto64.o                                                  702       72
     --------------------------------------------------------------------------------
-    Total:                                                   1'374       72
+    Total:                                                   1'446       72
 
 rt7M_tl.a: [45]
     ABImemclr.o                                                  6
@@ -3763,10 +3769,10 @@ th7M_tlf.a: [47]
     --------------------------------------------------------------------------------
     Total:                                                     204                16
 
-    Gaps                                                       113       14        4
+    Gaps                                                       111       14        4
     Linker created                                                       40    1'536
 ------------------------------------------------------------------------------------
-    Grand Total:                                           169'665    6'303  183'245
+    Grand Total:                                           169'791    6'336  183'249
 
 
 *******************************************************************************
@@ -3775,9 +3781,9 @@ th7M_tlf.a: [47]
 
 Entry                       Address      Size  Type      Object
 -----                       -------      ----  ----      ------
-.iar.init_table$$Base    0x802'9f9c             --   Gb  - Linker created -
-.iar.init_table$$Limit   0x802'9fc4             --   Gb  - Linker created -
-?main                    0x802'a125            Code  Gb  cmain.o [45]
+.iar.init_table$$Base    0x802'a01c             --   Gb  - Linker created -
+.iar.init_table$$Limit   0x802'a044             --   Gb  - Linker created -
+?main                    0x802'a1c5            Code  Gb  cmain.o [45]
 ADC_ConfigureBoostMode   0x800'5de5     0x158  Code  Gb  stm32h7xx_hal_adc.o [33]
 AppLog_get_tail_record   0x801'3c1b      0x56  Code  Gb  logger.o [1]
 AppLogg_init             0x801'3b09      0x1c  Code  Gb  logger.o [1]
@@ -3787,7 +3793,7 @@ App_create_pool_memry    0x800'4815      0x28  Code  Gb  Mem_man.o [1]
 App_free                 0x800'486f       0x8  Code  Gb  Mem_man.o [1]
 App_malloc               0x800'4865       0xa  Code  Gb  Mem_man.o [1]
 App_malloc_pending       0x800'483d      0x28  Code  Gb  Mem_man.o [1]
-BusFault_Handler         0x802'97b3       0x2  Code  Gb  App_ISRs.o [1]
+BusFault_Handler         0x802'9833       0x2  Code  Gb  App_ISRs.o [1]
 CHECK_IPV6_ADDRESSES_SAME
                          0x800'ffdd      0x2a  Code  Gb  nx_ipv6_util.o [29]
 CHECK_IP_ADDRESSES_BY_PREFIX
@@ -3795,13 +3801,13 @@ CHECK_IP_ADDRESSES_BY_PREFIX
 CHECK_UNSPECIFIED_ADDRESS
                          0x801'0007      0x22  Code  Gb  nx_ipv6_util.o [29]
 COPY_IPV6_ADDRESS        0x801'003b      0x12  Code  Gb  nx_ipv6_util.o [29]
-CSTACK$$Base            0x2402'c5c0             --   Gb  - Linker created -
-CSTACK$$Limit           0x2402'c9c0             --   Gb  - Linker created -
+CSTACK$$Base            0x2402'c5c8             --   Gb  - Linker created -
+CSTACK$$Limit           0x2402'c9c8             --   Gb  - Linker created -
 Client_misc_table_props
-                         0x802'9174      0x70  Data  Gb  BKMAN2_1_Params_dyn_tables.o [5]
+                         0x802'91f4      0x70  Data  Gb  BKMAN2_1_Params_dyn_tables.o [5]
 Create_recv_task         0x802'2261      0x84  Code  Gb  USB_CDC_driver.o [6]
-D1CorePrescTable         0x802'a868      0x10  Data  Gb  system_stm32h7xx.o [32]
-DebugMon_Handler         0x802'97b7       0x2  Code  Gb  App_ISRs.o [1]
+D1CorePrescTable         0x802'a908      0x10  Data  Gb  system_stm32h7xx.o [32]
+DebugMon_Handler         0x802'9837       0x2  Code  Gb  App_ISRs.o [1]
 Delay_m7                 0x801'6301            Code  Gb  Sdelay.o [1]
 Delete_recv_task         0x802'22e5      0x22  Code  Gb  USB_CDC_driver.o [6]
 DevFrameWorkDesc_FS     0x2402'b634      0xc8  Data  Lc  USB_descriptors_builder.o [6]
@@ -3877,7 +3883,7 @@ FMSTR_ProtocolDecoder    0x801'bfd3     0x116  Code  Gb  freemaster_protocol.o [
 FMSTR_ReadScope          0x801'c451      0x8a  Code  Gb  freemaster_scope.o [3]
 FMSTR_RecorderCreate     0x801'a5a7      0x76  Code  Gb  freemaster_rec.o [3]
 FMSTR_Rx                 0x802'4989     0x13c  Code  Lc  freemaster_serial.o [3]
-FMSTR_SERIAL             0x802'a940       0xc  Data  Gb  freemaster_serial.o [3]
+FMSTR_SERIAL             0x802'a9e0       0xc  Data  Gb  freemaster_serial.o [3]
 FMSTR_SendResponse       0x801'bfc7       0xc  Code  Gb  freemaster_protocol.o [3]
 FMSTR_SetRecCmd          0x801'a8dd      0xc8  Code  Gb  freemaster_rec.o [3]
 FMSTR_SetScope           0x801'c3bb      0x96  Code  Gb  freemaster_scope.o [3]
@@ -3892,13 +3898,13 @@ FMSTR_TsaGetTable        0x801'b4c5      0x30  Code  Gb  FreeMaster_thread.o [1]
 FMSTR_TsaGetTable_app_vars
                          0x801'b819      0x10  Code  Gb  FreeMaster_vars_map.o [1]
 FMSTR_TsaGetTable_app_vars::fmstr_tsatable
-                         0x802'a7f8      0x10  Data  Lc  FreeMaster_vars_map.o [1]
+                         0x802'a064      0x20  Data  Lc  FreeMaster_vars_map.o [1]
 FMSTR_TsaGetTable_dynamic_tsa
                          0x801'b27d      0x12  Code  Gb  freemaster_tsa.o [3]
 FMSTR_TsaGetTable_wvar_vars
                          0x801'b809      0x10  Code  Gb  BKMAN2_1_FreeMaster_vars.o [5]
 FMSTR_TsaGetTable_wvar_vars::fmstr_tsatable
-                         0x802'9fc4      0x20  Data  Lc  BKMAN2_1_FreeMaster_vars.o [5]
+                         0x802'a044      0x20  Data  Lc  BKMAN2_1_FreeMaster_vars.o [5]
 FMSTR_Tx                 0x802'4905      0x84  Code  Lc  freemaster_serial.o [3]
 FMSTR_ULebToBuffer       0x801'afe1       0xc  Code  Gb  freemaster_utils.o [3]
 FMSTR_UlebDecode         0x801'b08d       0xa  Code  Gb  freemaster_utils.o [3]
@@ -4086,11 +4092,11 @@ HAL_UARTEx_SetRxFifoThreshold
 HAL_UARTEx_SetTxFifoThreshold
                          0x800'7a51      0x54  Code  Gb  stm32h7xx_hal_uart_ex.o [33]
 HAL_UART_MspInit         0x800'46eb      0xbe  Code  Gb  usart.o [2]
-HEAP$$Base              0x2402'c9c0             --   Gb  - Linker created -
-HEAP$$Limit             0x2402'cbc0             --   Gb  - Linker created -
-HardFault_Handler        0x802'97af       0x2  Code  Gb  App_ISRs.o [1]
+HEAP$$Base              0x2402'c9c8             --   Gb  - Linker created -
+HEAP$$Limit             0x2402'cbc8             --   Gb  - Linker created -
+HardFault_Handler        0x802'982f       0x2  Code  Gb  App_ISRs.o [1]
 IPv6_Address_Type        0x801'0063      0xf8  Code  Gb  nx_ipv6_util.o [29]
-Init_Net                 0x802'9049      0x12  Code  Gb  Net_common.o [4]
+Init_Net                 0x802'90c9      0x12  Code  Gb  Net_common.o [4]
 Is_RNDIS_interface_active
                          0x802'07a1       0x8  Code  Lc  USB_RNDIS_driver.o [6]
 Is_RNDIS_network_active
@@ -4129,11 +4135,11 @@ LL_ADC_SetOffsetSignedSaturation
                          0x800'55f5      0x12  Code  Lc  stm32h7xx_hal_adc.o [33]
 LOGs                     0x801'3bdf      0x3c  Code  Gb  logger.o [1]
 Lookup_menu_item         0x801'3187      0x60  Code  Lc  MonitorVT100.o [7]
-MENU_MAIN                0x802'a97c       0xc  Data  Gb  MonitorVT100.o [7]
-MENU_MAIN_ITEMS          0x802'9844      0x48  Data  Gb  MonitorVT100.o [7]
-MENU_PARAMETERS          0x802'a988       0xc  Data  Gb  MonitorVT100.o [7]
-MENU_SPEC                0x802'a994       0xc  Data  Gb  MonitorVT100.o [7]
-MENU_SPEC_ITEMS          0x802'9e10      0x24  Data  Gb  MonitorVT100.o [7]
+MENU_MAIN                0x802'aa1c       0xc  Data  Gb  MonitorVT100.o [7]
+MENU_MAIN_ITEMS          0x802'98c4      0x48  Data  Gb  MonitorVT100.o [7]
+MENU_PARAMETERS          0x802'aa28       0xc  Data  Gb  MonitorVT100.o [7]
+MENU_SPEC                0x802'aa34       0xc  Data  Gb  MonitorVT100.o [7]
+MENU_SPEC_ITEMS          0x802'9e90      0x24  Data  Gb  MonitorVT100.o [7]
 MX_ADC1_Init             0x800'3a4d      0xf2  Code  Gb  adc.o [2]
 MX_ADC2_Init             0x800'3b3f      0xd0  Code  Gb  adc.o [2]
 MX_ADC3_Init             0x800'3c0f      0xac  Code  Gb  adc.o [2]
@@ -4152,7 +4158,7 @@ MX_USB_OTG_FS_PCD_Init   0x801'8fa5      0x54  Code  Gb  USB_periph_init.o [6]
 Mb_usbfs_rcv_task        0x802'24fd      0x9c  Code  Lc  USB_CDC_driver.o [6]
 Measure_reference_time_interval
                          0x801'3d7d      0x2e  Code  Gb  App_utils.o [1]
-MemManage_Handler        0x802'97b1       0x2  Code  Gb  App_ISRs.o [1]
+MemManage_Handler        0x802'9831       0x2  Code  Gb  App_ISRs.o [1]
 Menu_press_key_handler   0x801'32bb      0x96  Code  Gb  MonitorVT100.o [7]
 Mn_rndis_telnet_drv_deinit
                          0x802'1787      0x1c  Code  Lc  Net_Telnet.o [4]
@@ -4171,16 +4177,16 @@ Mn_usbfs_drv_send_buf    0x802'2381      0x42  Code  Lc  USB_CDC_driver.o [6]
 Mn_usbfs_drv_wait_ch     0x802'23c3      0xde  Code  Lc  USB_CDC_driver.o [6]
 Mnsdrv_get_usbfs_vcom0_driver
                          0x802'237d       0x4  Code  Gb  USB_CDC_driver.o [6]
-NMI_Handler              0x802'97ad       0x2  Code  Gb  App_ISRs.o [1]
+NMI_Handler              0x802'982d       0x2  Code  Gb  App_ISRs.o [1]
 NVIC_EncodePriority      0x800'2445      0x3e  Code  Lc  stm32h7xx_hal_cortex.o [33]
-Net_packet_pool_init     0x802'9009      0x28  Code  Gb  Net_common.o [4]
+Net_packet_pool_init     0x802'9089      0x28  Code  Gb  Net_common.o [4]
 Net_packet_pool_init::__FUNCTION__
-                         0x802'a37c      0x18  Data  Lc  Net_common.o [4]
+                         0x802'a41c      0x18  Data  Lc  Net_common.o [4]
 OTG_FS_EP1_IN_IRQHandler
-                         0x802'97d7       0xa  Code  Gb  App_ISRs.o [1]
+                         0x802'9857       0xa  Code  Gb  App_ISRs.o [1]
 OTG_FS_EP1_OUT_IRQHandler
-                         0x802'97cd       0xa  Code  Gb  App_ISRs.o [1]
-OTG_FS_IRQHandler        0x802'97e1       0xa  Code  Gb  App_ISRs.o [1]
+                         0x802'984d       0xa  Code  Gb  App_ISRs.o [1]
+OTG_FS_IRQHandler        0x802'9861       0xa  Code  Gb  App_ISRs.o [1]
 PARAM_EDITOR_HELP       0x2400'0174       0x4  Data  Lc  Params_editor.o [7]
 PCD_EP_OutSetupPacket_int
                          0x801'8f4f      0x4e  Code  Lc  stm32h7xx_hal_pcd.o [33]
@@ -4198,7 +4204,7 @@ RCCEx_PLL3_Config        0x800'1bb5     0x12a  Code  Lc  stm32h7xx_hal_rcc_ex.o 
 RNDIS_init_network_stack
                          0x802'0abf     0x108  Code  Gb  USB_RNDIS_driver.o [6]
 RNDIS_init_network_stack::__FUNCTION__
-                         0x802'a290      0x1c  Data  Lc  USB_RNDIS_driver.o [6]
+                         0x802'a330      0x1c  Data  Lc  USB_RNDIS_driver.o [6]
 RNDIS_instance_activate_callback
                          0x802'078d       0xa  Code  Lc  USB_RNDIS_driver.o [6]
 RNDIS_instance_deactivate_callback
@@ -4207,15 +4213,15 @@ RNDIS_interface_controller
                          0x802'0d89      0x2c  Code  Gb  USB_RNDIS_driver.o [6]
 RNDIS_start_network      0x802'0bc7      0x92  Code  Gb  USB_RNDIS_driver.o [6]
 RNDIS_start_network::__FUNCTION__
-                         0x802'a77c      0x14  Data  Lc  USB_RNDIS_driver.o [6]
+                         0x802'a81c      0x14  Data  Lc  USB_RNDIS_driver.o [6]
 RNDIS_stop_network       0x802'0c59      0x50  Code  Gb  USB_RNDIS_driver.o [6]
 RNDIS_stop_network::__FUNCTION__
-                         0x802'a790      0x14  Data  Lc  USB_RNDIS_driver.o [6]
+                         0x802'a830      0x14  Data  Lc  USB_RNDIS_driver.o [6]
 RTC_ByteToBcd2           0x800'5591      0x18  Code  Gb  stm32h7xx_hal_rtc.o [33]
 RTC_EnterInitMode        0x800'54d9      0x42  Code  Gb  stm32h7xx_hal_rtc.o [33]
 RTC_ExitInitMode         0x800'551b      0x5e  Code  Gb  stm32h7xx_hal_rtc.o [33]
-Region$$Table$$Base      0x802'9f9c             --   Gb  - Linker created -
-Region$$Table$$Limit     0x802'9fc4             --   Gb  - Linker created -
+Region$$Table$$Base      0x802'a01c             --   Gb  - Linker created -
+Region$$Table$$Limit     0x802'a044             --   Gb  - Linker created -
 Register_USB_CDC_ACM_class
                          0x802'2599      0x28  Code  Gb  USB_CDC_driver.o [6]
 Register_USB_MSC_class   0x800'8989      0x50  Code  Gb  USB_MSC_driver.o [6]
@@ -4223,11 +4229,11 @@ Register_rndis_class     0x802'07b1      0xc8  Code  Gb  USB_RNDIS_driver.o [6]
 Reset_system             0x801'3dad       0xc  Code  Gb  App_utils.o [1]
 Restore_NV_parameters    0x802'6c0d      0x64  Code  Gb  NV_store.o [5]
 Restore_NV_parameters::__FUNCTION__
-                         0x802'a424      0x18  Data  Lc  NV_store.o [5]
+                         0x802'a4c4      0x18  Data  Lc  NV_store.o [5]
 Restore_from_NV_store    0x802'6c99       0x4  Code  Gb  NV_store.o [5]
 Return_def_params        0x802'6a45     0x1c8  Code  Gb  NV_store.o [5]
 Return_to_prev_menu      0x801'337d      0x2e  Code  Gb  MonitorVT100.o [7]
-SDMMC1_IRQHandler        0x802'97c3       0xa  Code  Gb  App_ISRs.o [1]
+SDMMC1_IRQHandler        0x802'9843       0xa  Code  Gb  App_ISRs.o [1]
 SDMMC_CmdAppCommand      0x800'8489      0x34  Code  Gb  stm32h7xx_ll_sdmmc.o [33]
 SDMMC_CmdAppOperCommand
                          0x800'84bd      0x2e  Code  Gb  stm32h7xx_ll_sdmmc.o [33]
@@ -4300,11 +4306,11 @@ SystemInit               0x802'7221      0xdc  Code  Gb  system_stm32h7xx.o [32]
 TABLE_EDITOR_HELP       0x2400'0178       0x4  Data  Lc  Params_editor.o [7]
 TELNET_server_create     0x802'1a89      0xd2  Code  Gb  Net_Telnet.o [4]
 TELNET_server_create::__FUNCTION__
-                         0x802'a3c4      0x18  Data  Lc  Net_Telnet.o [4]
+                         0x802'a464      0x18  Data  Lc  Net_Telnet.o [4]
 TELNET_server_delete     0x802'1b5b      0x2e  Code  Gb  Net_Telnet.o [4]
 TELNET_server_delete::__FUNCTION__
-                         0x802'a40c      0x18  Data  Lc  Net_Telnet.o [4]
-TIM3_IRQHandler          0x802'97b9       0xa  Code  Gb  App_ISRs.o [1]
+                         0x802'a4ac      0x18  Data  Lc  Net_Telnet.o [4]
+TIM3_IRQHandler          0x802'9839       0xa  Code  Gb  App_ISRs.o [1]
 TIM_Base_SetConfig       0x800'2a37      0xca  Code  Gb  stm32h7xx_hal_tim.o [33]
 TIM_OC1_SetConfig        0x800'2b01      0xa0  Code  Lc  stm32h7xx_hal_tim.o [33]
 TIM_OC2_SetConfig        0x800'2ba1      0x92  Code  Gb  stm32h7xx_hal_tim.o [33]
@@ -4318,27 +4324,27 @@ Task_VT100_create        0x801'2e59     0x132  Code  Gb  MonitorVT100.o [7]
 Task_VT100_delete        0x801'2f8b      0x7e  Code  Gb  MonitorVT100.o [7]
 Telnet_client_connect    0x802'19e7      0x5e  Code  Gb  Net_Telnet.o [4]
 Telnet_client_connect::__FUNCTION__
-                         0x802'a394      0x18  Data  Lc  Net_Telnet.o [4]
+                         0x802'a434      0x18  Data  Lc  Net_Telnet.o [4]
 Telnet_client_disconnect
                          0x802'1a61      0x28  Code  Gb  Net_Telnet.o [4]
 Telnet_client_disconnect::__FUNCTION__
-                         0x802'a194      0x1c  Data  Lc  Net_Telnet.o [4]
+                         0x802'a234      0x1c  Data  Lc  Net_Telnet.o [4]
 Telnet_receive_data      0x802'1a45      0x1c  Code  Gb  Net_Telnet.o [4]
 Thread_freemaster        0x801'b6a9      0xd4  Code  Lc  FreeMaster_thread.o [1]
-Thread_idle              0x802'8739      0x4e  Code  Lc  IDLE_task.o [1]
-Thread_idle_create       0x802'8787      0x32  Code  Gb  IDLE_task.o [1]
-Thread_main              0x802'8f91      0x78  Code  Gb  Main_thread.o [1]
+Thread_idle              0x802'82d5      0x7e  Code  Lc  IDLE_task.o [1]
+Thread_idle_create       0x802'8353      0x32  Code  Gb  IDLE_task.o [1]
+Thread_main              0x802'9011      0x78  Code  Gb  Main_thread.o [1]
 Thread_main::__FUNCTION__
-                         0x802'a964       0xc  Data  Lc  Main_thread.o [1]
+                         0x802'aa04       0xc  Data  Lc  Main_thread.o [1]
 Timestump_convert_to_sec_usec
                          0x800'9df1      0x34  Code  Gb  Time_utils.o [1]
 UARTEx_SetNbDataToProcess
                          0x800'7af9      0x62  Code  Lc  stm32h7xx_hal_uart_ex.o [33]
 UARTEx_SetNbDataToProcess::denominator
-                         0x802'aabc       0x8  Data  Lc  stm32h7xx_hal_uart_ex.o [33]
+                         0x802'ab5c       0x8  Data  Lc  stm32h7xx_hal_uart_ex.o [33]
 UARTEx_SetNbDataToProcess::numerator
-                         0x802'aab4       0x8  Data  Lc  stm32h7xx_hal_uart_ex.o [33]
-UARTPrescTable           0x802'a484      0x18  Data  Gb  stm32h7xx_hal_uart.o [33]
+                         0x802'ab54       0x8  Data  Lc  stm32h7xx_hal_uart_ex.o [33]
+UARTPrescTable           0x802'a524      0x18  Data  Gb  stm32h7xx_hal_uart.o [33]
 UART_AdvFeatureConfig    0x800'9073      0xda  Code  Gb  stm32h7xx_hal_uart.o [33]
 UART_CheckIdleState      0x800'914d      0x72  Code  Gb  stm32h7xx_hal_uart.o [33]
 UART_SetConfig           0x800'8b25     0x54c  Code  Gb  stm32h7xx_hal_uart.o [33]
@@ -4350,9 +4356,9 @@ USBD_Device_FS          0x2402'b134     0x11c  Data  Gb  USB_descriptors_builder
 USBD_Device_Framework_Builder
                          0x801'780b     0x1dc  Code  Lc  USB_descriptors_builder.o [6]
 USBD_Device_Framework_Builder::pDevDesc
-                        0x2402'c560       0x4  Data  Lc  USB_descriptors_builder.o [6]
-USBD_Device_Framework_Builder::pDevQualDesc
                         0x2402'c564       0x4  Data  Lc  USB_descriptors_builder.o [6]
+USBD_Device_Framework_Builder::pDevQualDesc
+                        0x2402'c568       0x4  Data  Lc  USB_descriptors_builder.o [6]
 USBD_Device_HS          0x2402'b250     0x11c  Data  Gb  USB_descriptors_builder.o [6]
 USBD_FrameWork_AddClass
                          0x801'79e7      0x56  Code  Lc  USB_descriptors_builder.o [6]
@@ -4364,32 +4370,32 @@ USBD_FrameWork_AssignEp
                          0x801'7c93      0x8a  Code  Lc  USB_descriptors_builder.o [6]
 USBD_FrameWork_CDCDesc   0x801'7e9f     0x22e  Code  Lc  USB_descriptors_builder.o [6]
 USBD_FrameWork_CDCDesc::pACMDesc
-                        0x2402'c574       0x4  Data  Lc  USB_descriptors_builder.o [6]
-USBD_FrameWork_CDCDesc::pCallMgmDesc
-                        0x2402'c570       0x4  Data  Lc  USB_descriptors_builder.o [6]
-USBD_FrameWork_CDCDesc::pHeadDesc
-                        0x2402'c56c       0x4  Data  Lc  USB_descriptors_builder.o [6]
-USBD_FrameWork_CDCDesc::pIadDesc
-                        0x2402'c57c       0x4  Data  Lc  USB_descriptors_builder.o [6]
-USBD_FrameWork_CDCDesc::pUnionDesc
                         0x2402'c578       0x4  Data  Lc  USB_descriptors_builder.o [6]
+USBD_FrameWork_CDCDesc::pCallMgmDesc
+                        0x2402'c574       0x4  Data  Lc  USB_descriptors_builder.o [6]
+USBD_FrameWork_CDCDesc::pHeadDesc
+                        0x2402'c570       0x4  Data  Lc  USB_descriptors_builder.o [6]
+USBD_FrameWork_CDCDesc::pIadDesc
+                        0x2402'c580       0x4  Data  Lc  USB_descriptors_builder.o [6]
+USBD_FrameWork_CDCDesc::pUnionDesc
+                        0x2402'c57c       0x4  Data  Lc  USB_descriptors_builder.o [6]
 USBD_FrameWork_CDC_ECM_Desc
                          0x801'80cd     0x210  Code  Lc  USB_descriptors_builder.o [6]
 USBD_FrameWork_CDC_ECM_Desc::pACMDesc
-                        0x2402'c588       0x4  Data  Lc  USB_descriptors_builder.o [6]
-USBD_FrameWork_CDC_ECM_Desc::pCallMgmDesc
-                        0x2402'c584       0x4  Data  Lc  USB_descriptors_builder.o [6]
-USBD_FrameWork_CDC_ECM_Desc::pHeadDesc
-                        0x2402'c580       0x4  Data  Lc  USB_descriptors_builder.o [6]
-USBD_FrameWork_CDC_ECM_Desc::pIadDesc
-                        0x2402'c590       0x4  Data  Lc  USB_descriptors_builder.o [6]
-USBD_FrameWork_CDC_ECM_Desc::pUnionDesc
                         0x2402'c58c       0x4  Data  Lc  USB_descriptors_builder.o [6]
+USBD_FrameWork_CDC_ECM_Desc::pCallMgmDesc
+                        0x2402'c588       0x4  Data  Lc  USB_descriptors_builder.o [6]
+USBD_FrameWork_CDC_ECM_Desc::pHeadDesc
+                        0x2402'c584       0x4  Data  Lc  USB_descriptors_builder.o [6]
+USBD_FrameWork_CDC_ECM_Desc::pIadDesc
+                        0x2402'c594       0x4  Data  Lc  USB_descriptors_builder.o [6]
+USBD_FrameWork_CDC_ECM_Desc::pUnionDesc
+                        0x2402'c590       0x4  Data  Lc  USB_descriptors_builder.o [6]
 USBD_FrameWork_FindFreeIFNbr
                          0x801'7c3d      0x2e  Code  Lc  USB_descriptors_builder.o [6]
 USBD_FrameWork_MSCDesc   0x801'7db5      0xea  Code  Lc  USB_descriptors_builder.o [6]
 USBD_FrameWork_MSCDesc::pIadDesc
-                        0x2402'c568       0x4  Data  Lc  USB_descriptors_builder.o [6]
+                        0x2402'c56c       0x4  Data  Lc  USB_descriptors_builder.o [6]
 USBD_Get_Device_Framework_Speed
                          0x801'7639      0x70  Code  Gb  USB_descriptors_builder.o [6]
 USBD_Get_Language_Id_Framework
@@ -4399,7 +4405,7 @@ USBD_Get_String_Framework
 USBD_framework_set_ep    0x801'7d1d      0x58  Code  Lc  USB_descriptors_builder.o [6]
 USBD_framework_set_if    0x801'7d75      0x40  Code  Lc  USB_descriptors_builder.o [6]
 USBD_language_id_framework
-                        0x2402'c5b0       0x2  Data  Gb  USB_descriptors_builder.o [6]
+                        0x2402'c5b4       0x2  Data  Gb  USB_descriptors_builder.o [6]
 USBD_string_framework   0x2402'b36c     0x100  Data  Gb  USB_descriptors_builder.o [6]
 USB_ActivateEndpoint     0x801'6b43      0xba  Code  Gb  stm32h7xx_ll_usb.o [33]
 USB_ActivateSetup        0x801'754d      0x24  Code  Gb  stm32h7xx_ll_usb.o [33]
@@ -4435,7 +4441,7 @@ USB_SetDevAddress        0x801'745b      0x2a  Code  Gb  stm32h7xx_ll_usb.o [33]
 USB_SetDevSpeed          0x801'6b0b      0x14  Code  Gb  stm32h7xx_ll_usb.o [33]
 USB_SetTurnaroundTime    0x801'67bd      0xd2  Code  Gb  stm32h7xx_ll_usb.o [33]
 USB_WritePacket          0x801'72a1      0x3e  Code  Gb  stm32h7xx_ll_usb.o [33]
-UsageFault_Handler       0x802'97b5       0x2  Code  Gb  App_ISRs.o [1]
+UsageFault_Handler       0x802'9835       0x2  Code  Gb  App_ISRs.o [1]
 UserClassInstance       0x2400'01b4       0xc  Data  Gb  USB_descriptors_builder.o [6]
 VT100_send_str_to_pos    0x801'33d3      0x38  Code  Gb  MonitorVT100.o [7]
 VT100_set_cursor_pos     0x801'33ab      0x28  Code  Gb  MonitorVT100.o [7]
@@ -4527,7 +4533,7 @@ _PutcharsFullNoMb        0x801'4c85      0x2e  Code  Lc  xprintffull_nomb.o [43]
 _RNDIS_create_DHCP_server
                          0x802'093f     0x17e  Code  Lc  USB_RNDIS_driver.o [6]
 _RNDIS_create_DHCP_server::__FUNCTION__
-                         0x802'a258      0x1c  Data  Lc  USB_RNDIS_driver.o [6]
+                         0x802'a2f8      0x1c  Data  Lc  USB_RNDIS_driver.o [6]
 _RNDIS_get_IP_proprties
                          0x802'0879      0xc6  Code  Lc  USB_RNDIS_driver.o [6]
 _RNDIS_link_status_change_callback
@@ -4568,13 +4574,14 @@ __aeabi_memmove4         0x802'06c9            Code  Gb  ABImemmove.o [45]
 __aeabi_memmove8         0x802'06c9            Code  Gb  ABImemmove.o [45]
 __aeabi_memset           0x800'49ed            Code  Gb  ABImemset.o [45]
 __aeabi_ui2d             0x801'647f       0xe  Code  Gb  U32ToDbl.o [44]
+__aeabi_ul2f             0x802'83a5            Code  Gb  U64ToFlt.o [44]
 __aeabi_uldivmod         0x800'9eb9            Code  Gb  I64DivMod.o [45]
-__cexit_clearlocks       0x802'a14f            Code  Gb  cexit.o [45]
-__cmain                  0x802'a125            Code  Gb  cmain.o [45]
-__cstart_clearlocks      0x802'ad38            Data  Gb  cstart_clearlocks.o [45]
+__cexit_clearlocks       0x802'a1ef            Code  Gb  cexit.o [45]
+__cmain                  0x802'a1c5            Code  Gb  cmain.o [45]
+__cstart_clearlocks      0x802'add8            Data  Gb  cstart_clearlocks.o [45]
 __data_GetMemChunk       0x800'c321      0x2c  Code  Gb  xgetmemchunk.o [43]
 __data_GetMemChunk::start
-                        0x2402'c5a4       0x4  Data  Lc  xgetmemchunk.o [43]
+                        0x2402'c5a8       0x4  Data  Lc  xgetmemchunk.o [43]
 __exit                   0x800'c571      0x14  Code  Gb  exit.o [46]
 __iar_Fail_s             0x801'6331      0x1c  Code  Gb  xfail_s.o [43]
 __iar_Initlocks          0x800'7c39      0x36  Code  Gb  xsyslock_mtx.o [47]
@@ -4598,7 +4605,7 @@ __iar_Unlocksyslock_Malloc
                          0x800'7beb       0x6  Code  Gb  xsyslock_mtx.o [47]
 __iar_clearlocks         0x800'7bf1      0x48  Code  Gb  xsyslock_mtx.o [47]
 __iar_close_ttio         0x800'c585      0x2c  Code  Gb  iarttio.o [46]
-__iar_data_init3         0x802'9dc5      0x28  Code  Gb  data_init.o [45]
+__iar_data_init3         0x802'9e45      0x28  Code  Gb  data_init.o [45]
 __iar_dlfree             0x800'b255     0x52a  Code  Gb  dlmalloc.o [43]
 __iar_dlmalloc           0x800'a341     0xf14  Code  Gb  dlmalloc.o [43]
 __iar_file_FOPEN_MAX     0x800'9601       0x4  Code  Gb  xfiles.o [43]
@@ -4611,12 +4618,12 @@ __iar_frexp64            0x801'5c49            Code  Gb  frexp.o [44]
 __iar_frexpl             0x801'5c6d            Code  Gb  frexp.o [44]
 __iar_globLocale        0x2400'03c0      0x48  Data  Lc  xlocale_c.o [43]
 __iar_global_Locale      0x801'5ae3       0x4  Code  Gb  xlocale_c.o [43]
-__iar_init_vfp           0x802'9f79            Code  Gb  fpinit_M.o [44]
+__iar_init_vfp           0x802'9ff9            Code  Gb  fpinit_M.o [44]
 __iar_ldexp64            0x801'5ce5            Code  Gb  ldexp.o [44]
 __iar_lookup_ttioh       0x800'c5b1       0x8  Code  Gb  XShttio.o [43]
 __iar_lz77_init_single3
                          0x800'2e0b      0x76  Code  Gb  lz77_init_single.o [45]
-__iar_program_start      0x802'a301            Code  Gb  cstartup_M.o [45]
+__iar_program_start      0x802'a3a1            Code  Gb  cstartup_M.o [45]
 __iar_scalbln64          0x801'5ce5            Code  Gb  ldexp.o [44]
 __iar_scalbn64           0x801'5ce5            Code  Gb  ldexp.o [44]
 __iar_softfp___iar_Sto64
@@ -4652,33 +4659,33 @@ __iar_tls_init_no_ctors
                          0x800'a271      0x1c  Code  Gb  tlsinit.o [47]
 __iar_tls_size           0x800'a299       0x4  Code  Gb  tlsinit.o [47]
 __iar_ttio_handles      0x2400'0408       0x8  Data  Lc  XShttio.o [43]
-__iar_zero_init3         0x802'9b41      0x38  Code  Gb  zero_init3.o [45]
-__low_level_init         0x802'a143       0x4  Code  Gb  low_level_init.o [43]
+__iar_zero_init3         0x802'9bc1      0x38  Code  Gb  zero_init3.o [45]
+__low_level_init         0x802'a1e3       0x4  Code  Gb  low_level_init.o [43]
 __tx_PendSVHandler       0x800'7ca1            Code  Gb  tx_thread_schedule.o [37]
 __tx_SysTickHandler      0x800'7bab            Code  Gb  tx_initialize_low_level.o [35]
-__tx_free_memory_start  0x2402'cbc0            Data  Gb  tx_initialize_low_level.o [35]
+__tx_free_memory_start  0x2402'cbc8            Data  Gb  tx_initialize_low_level.o [35]
 __tx_iar_file_lock_internal_errors
-                        0x2402'c4d8       0x4  Data  Gb  tx_iar.o [37]
+                        0x2402'c4dc       0x4  Data  Gb  tx_iar.o [37]
 __tx_iar_file_lock_mutexes
                         0x2402'ae50     0x1a0  Data  Gb  tx_iar.o [37]
 __tx_iar_file_lock_next_free_mutex
-                        0x2402'c4d0       0x4  Data  Gb  tx_iar.o [37]
-__tx_iar_file_lock_no_mutexes
                         0x2402'c4d4       0x4  Data  Gb  tx_iar.o [37]
+__tx_iar_file_lock_no_mutexes
+                        0x2402'c4d8       0x4  Data  Gb  tx_iar.o [37]
 __tx_iar_system_lock_internal_errors
-                        0x2402'c4c8       0x4  Data  Gb  tx_iar.o [37]
-__tx_iar_system_lock_isr_caller
                         0x2402'c4cc       0x4  Data  Gb  tx_iar.o [37]
+__tx_iar_system_lock_isr_caller
+                        0x2402'c4d0       0x4  Data  Gb  tx_iar.o [37]
 __tx_iar_system_lock_mutexes
                         0x2402'b564      0xd0  Data  Lc  tx_iar.o [37]
 __tx_iar_system_lock_next_free_mutex
-                        0x2402'c4c0       0x4  Data  Lc  tx_iar.o [37]
+                        0x2402'c4c4       0x4  Data  Lc  tx_iar.o [37]
 __tx_iar_system_lock_no_mutexes
-                        0x2402'c4c4       0x4  Data  Gb  tx_iar.o [37]
+                        0x2402'c4c8       0x4  Data  Gb  tx_iar.o [37]
 __vector_table           0x800'0000            Data  Gb  startup_stm32h753xx.o [34]
 _applog_write            0x801'3b25      0xba  Code  Lc  logger.o [1]
-_call_main               0x802'a131            Code  Gb  cmain.o [45]
-_exit                    0x802'a14d            Code  Gb  cexit.o [45]
+_call_main               0x802'a1d1            Code  Gb  cmain.o [45]
+_exit                    0x802'a1ed            Code  Gb  cexit.o [45]
 _fmstr_wFlags           0x2402'c438       0x4  Data  Lc  freemaster_serial.o [3]
 _gm_                    0x2402'ac60     0x1d8  Data  Lc  dlmalloc.o [43]
 _nx_arp_dynamic_entry_delete
@@ -4693,7 +4700,7 @@ _nx_arp_packet_receive   0x802'43e7     0x3a2  Code  Gb  nx_arp_packet_receive.o
 _nx_arp_packet_send      0x800'fb0d      0xcc  Code  Gb  nx_arp_packet_send.o [29]
 _nx_arp_periodic_update
                          0x802'7499     0x132  Code  Gb  nx_arp_periodic_update.o [29]
-_nx_arp_queue_process    0x802'9b09      0x38  Code  Gb  nx_arp_queue_process.o [29]
+_nx_arp_queue_process    0x802'9b89      0x38  Code  Gb  nx_arp_queue_process.o [29]
 _nx_arp_queue_send       0x800'fbd9      0x98  Code  Gb  nx_arp_queue_send.o [29]
 _nx_dhcp_add_option      0x800'de31      0x30  Code  Lc  nxd_dhcp_server.o [11]
 _nx_dhcp_add_requested_option
@@ -4756,16 +4763,16 @@ _nx_dhcp_validate_client_message
                          0x800'd647     0x316  Code  Lc  nxd_dhcp_server.o [11]
 _nx_icmp_enable          0x802'1651      0x24  Code  Gb  nx_icmp_enable.o [29]
 _nx_icmp_packet_process
-                         0x802'8ef1      0x24  Code  Gb  nx_icmp_packet_process.o [29]
+                         0x802'8f71      0x24  Code  Gb  nx_icmp_packet_process.o [29]
 _nx_icmp_packet_receive
-                         0x802'8e75      0x7c  Code  Gb  nx_icmp_packet_receive.o [29]
-_nx_icmp_queue_process   0x802'9c75      0x2e  Code  Gb  nx_icmp_queue_process.o [29]
+                         0x802'8ef5      0x7c  Code  Gb  nx_icmp_packet_receive.o [29]
+_nx_icmp_queue_process   0x802'9cf5      0x2e  Code  Gb  nx_icmp_queue_process.o [29]
 _nx_icmpv4_packet_process
-                         0x802'8df1      0x82  Code  Gb  nx_icmpv4_packet_process.o [29]
+                         0x802'8e71      0x82  Code  Gb  nx_icmpv4_packet_process.o [29]
 _nx_icmpv4_process_echo_reply
                          0x802'7da5      0xe8  Code  Gb  nx_icmpv4_process_echo_reply.o [29]
 _nx_icmpv4_process_echo_request
-                         0x802'85fd      0xa4  Code  Gb  nx_icmpv4_process_echo_request.o [29]
+                         0x802'8715      0xa4  Code  Gb  nx_icmpv4_process_echo_request.o [29]
 _nx_icmpv4_send_error_message
                          0x802'34a1     0x1ba  Code  Gb  nx_icmpv4_send_error_message.o [29]
 _nx_icmpv6_DAD_clear_NDCache_entry
@@ -4788,8 +4795,8 @@ _nx_ip_address_set       0x802'0e51      0x74  Code  Gb  nx_ip_address_set.o [29
 _nx_ip_checksum_compute
                          0x800'f6d1     0x10a  Code  Gb  nx_ip_checksum_compute.o [29]
 _nx_ip_create            0x802'137d     0x1a4  Code  Gb  nx_ip_create.o [29]
-_nx_ip_created_count    0x2402'c484       0x4  Data  Gb  nx_ip_initialize.o [29]
-_nx_ip_created_ptr      0x2402'c480       0x4  Data  Gb  nx_ip_initialize.o [29]
+_nx_ip_created_count    0x2402'c488       0x4  Data  Gb  nx_ip_initialize.o [29]
+_nx_ip_created_ptr      0x2402'c484       0x4  Data  Gb  nx_ip_initialize.o [29]
 _nx_ip_deferred_link_status_process
                          0x802'4069      0x7e  Code  Gb  nx_ip_deferred_link_status_process.o [29]
 _nx_ip_dispatch_process
@@ -4803,11 +4810,11 @@ _nx_ip_fast_periodic_timer_entry
 _nx_ip_fragment_assembly
                          0x802'2dbd     0x404  Code  Gb  nx_ip_fragment_assembly.o [29]
 _nx_ip_fragment_cleanup
-                         0x802'82d5      0x7e  Code  Lc  nx_ip_fragment_timeout_check.o [29]
+                         0x802'83ed      0x7e  Code  Lc  nx_ip_fragment_timeout_check.o [29]
 _nx_ip_fragment_enable   0x802'1675      0x2c  Code  Gb  nx_ip_fragment_enable.o [29]
 _nx_ip_fragment_packet   0x802'650d     0x2b8  Code  Gb  nx_ip_fragment_packet.o [29]
 _nx_ip_fragment_timeout_check
-                         0x802'835d      0x48  Code  Gb  nx_ip_fragment_timeout_check.o [29]
+                         0x802'8475      0x48  Code  Gb  nx_ip_fragment_timeout_check.o [29]
 _nx_ip_gateway_address_set
                          0x802'16a1      0x82  Code  Gb  nx_ip_gateway_address_set.o [29]
 _nx_ip_header_add        0x801'0879     0x138  Code  Gb  nx_ip_header_add.o [29]
@@ -4821,7 +4828,7 @@ _nx_ip_packet_deferred_receive
 _nx_ip_packet_receive    0x802'3e13      0x72  Code  Gb  nx_ip_packet_receive.o [29]
 _nx_ip_packet_send       0x801'0387      0x9c  Code  Gb  nx_ip_packet_send.o [29]
 _nx_ip_periodic_timer_entry
-                         0x802'a8d9      0x10  Code  Gb  nx_ip_periodic_timer_entry.o [29]
+                         0x802'a979      0x10  Code  Gb  nx_ip_periodic_timer_entry.o [29]
 _nx_ip_route_find        0x800'f7dd     0x24c  Code  Gb  nx_ip_route_find.o [29]
 _nx_ip_thread_entry      0x802'3a09     0x3d0  Code  Gb  nx_ip_thread_entry.o [29]
 _nx_ipv4_option_process
@@ -4831,7 +4838,7 @@ _nx_ipv4_packet_receive
 _nx_ipv6_address_change_endian
                          0x801'016d      0x1e  Code  Gb  nx_ipv6_util.o [29]
 _nx_ipv6_all_router_address
-                         0x802'a858      0x10  Data  Lc  nx_icmpv6_send_rs.o [29]
+                         0x802'a8f8      0x10  Data  Lc  nx_icmpv6_send_rs.o [29]
 _nx_ipv6_fragment_process
                          0x801'166d     0x252  Code  Gb  nx_ipv6_fragment_process.o [29]
 _nx_ipv6_header_add      0x801'0ca3      0xc8  Code  Gb  nx_ipv6_header_add.o [29]
@@ -4851,7 +4858,7 @@ _nx_ipv6_process_hop_by_hop_option
 _nx_ipv6_process_routing_option
                          0x802'38cf      0x2c  Code  Gb  nx_ipv6_process_routing_option.o [29]
 _nx_ipv6_unspecified_address
-                         0x802'a848      0x10  Data  Lc  nx_icmpv6_send_ns.o [29]
+                         0x802'a8e8      0x10  Data  Lc  nx_icmpv6_send_ns.o [29]
 _nx_nd_cache_add_entry   0x801'1a7d      0xb6  Code  Gb  nx_nd_cache_add_entry.o [29]
 _nx_nd_cache_delete_internal
                          0x801'1cbd      0xa6  Code  Gb  nx_nd_cache_delete_internal.o [29]
@@ -4865,12 +4872,12 @@ _nx_packet_data_extract_offset
 _nx_packet_data_retrieve
                          0x802'1e11      0x48  Code  Gb  nx_packet_data_retrieve.o [29]
 _nx_packet_pool_cleanup
-                         0x802'9089      0x78  Code  Gb  nx_packet_pool_cleanup.o [29]
+                         0x802'9109      0x78  Code  Gb  nx_packet_pool_cleanup.o [29]
 _nx_packet_pool_create   0x802'55c5      0xfc  Code  Gb  nx_packet_pool_create.o [29]
 _nx_packet_pool_created_count
-                        0x2402'c48c       0x4  Data  Gb  nx_packet_pool_initialize.o [29]
+                        0x2402'c490       0x4  Data  Gb  nx_packet_pool_initialize.o [29]
 _nx_packet_pool_created_ptr
-                        0x2402'c488       0x4  Data  Gb  nx_packet_pool_initialize.o [29]
+                        0x2402'c48c       0x4  Data  Gb  nx_packet_pool_initialize.o [29]
 _nx_packet_pool_delete   0x802'56c1      0xac  Code  Gb  nx_packet_pool_delete.o [29]
 _nx_packet_pool_initialize
                          0x802'7d71      0x18  Code  Gb  nx_packet_pool_initialize.o [29]
@@ -4880,48 +4887,48 @@ _nx_packet_transmit_release
 _nx_rarp_packet_deferred_receive
                          0x802'1d6d      0x60  Code  Gb  nx_rarp_packet_deferred_receive.o [29]
 _nx_secure_tls_created_count
-                        0x2402'c494       0x4  Data  Gb  nx_secure_tls_initialize.o [31]
+                        0x2402'c498       0x4  Data  Gb  nx_secure_tls_initialize.o [31]
 _nx_secure_tls_created_ptr
-                        0x2402'c490       0x4  Data  Gb  nx_secure_tls_initialize.o [31]
+                        0x2402'c494       0x4  Data  Gb  nx_secure_tls_initialize.o [31]
 _nx_secure_tls_initialize
-                         0x802'905d      0x2c  Code  Gb  nx_secure_tls_initialize.o [31]
+                         0x802'90dd      0x2c  Code  Gb  nx_secure_tls_initialize.o [31]
 _nx_secure_tls_protection
                         0x2402'c2c4      0x34  Data  Gb  nx_secure_tls_initialize.o [31]
 _nx_system_build_options_1
-                        0x2402'c498       0x4  Data  Gb  nx_system_initialize.o [29]
-_nx_system_build_options_2
                         0x2402'c49c       0x4  Data  Gb  nx_system_initialize.o [29]
-_nx_system_build_options_3
+_nx_system_build_options_2
                         0x2402'c4a0       0x4  Data  Gb  nx_system_initialize.o [29]
-_nx_system_build_options_4
+_nx_system_build_options_3
                         0x2402'c4a4       0x4  Data  Gb  nx_system_initialize.o [29]
-_nx_system_build_options_5
+_nx_system_build_options_4
                         0x2402'c4a8       0x4  Data  Gb  nx_system_initialize.o [29]
+_nx_system_build_options_5
+                        0x2402'c4ac       0x4  Data  Gb  nx_system_initialize.o [29]
 _nx_system_initialize    0x802'7c7d      0xf4  Code  Gb  nx_system_initialize.o [29]
 _nx_tcp_2MSL_timer_rate
-                        0x2402'c4b8       0x4  Data  Gb  nx_tcp_initialize.o [29]
-_nx_tcp_ack_timer_rate  0x2402'c4b0       0x4  Data  Gb  nx_tcp_initialize.o [29]
+                        0x2402'c4bc       0x4  Data  Gb  nx_tcp_initialize.o [29]
+_nx_tcp_ack_timer_rate  0x2402'c4b4       0x4  Data  Gb  nx_tcp_initialize.o [29]
 _nx_tcp_cleanup_deferred
-                         0x800'edc7       0x2  Code  Gb  nx_tcp_cleanup_deferred.o [29]
+                         0x800'f463       0x2  Code  Gb  nx_tcp_cleanup_deferred.o [29]
 _nx_tcp_client_bind_cleanup
                          0x802'8201      0xd4  Code  Gb  nx_tcp_client_bind_cleanup.o [29]
 _nx_tcp_connect_cleanup
                          0x801'dca1      0xc0  Code  Gb  nx_tcp_connect_cleanup.o [29]
 _nx_tcp_deferred_cleanup_check
-                         0x802'8545      0xb8  Code  Gb  nx_tcp_deferred_cleanup_check.o [29]
+                         0x802'865d      0xb8  Code  Gb  nx_tcp_deferred_cleanup_check.o [29]
 _nx_tcp_disconnect_cleanup
                          0x801'df25      0xa4  Code  Gb  nx_tcp_disconnect_cleanup.o [29]
 _nx_tcp_enable           0x802'15b1      0x90  Code  Gb  nx_tcp_enable.o [29]
 _nx_tcp_fast_periodic_processing
                          0x802'70cd     0x154  Code  Gb  nx_tcp_fast_periodic_processing.o [29]
 _nx_tcp_fast_timer_rate
-                        0x2402'c4ac       0x4  Data  Gb  nx_tcp_initialize.o [29]
+                        0x2402'c4b0       0x4  Data  Gb  nx_tcp_initialize.o [29]
 _nx_tcp_initialize       0x802'7da1       0x2  Code  Gb  nx_tcp_initialize.o [29]
 _nx_tcp_mss_option_get   0x801'e001      0x60  Code  Gb  nx_tcp_mss_option_get.o [29]
 _nx_tcp_no_connection_reset
                          0x801'f40b      0xa0  Code  Gb  nx_tcp_no_connection_reset.o [29]
 _nx_tcp_packet_process   0x801'eb1b     0x67a  Code  Gb  nx_tcp_packet_process.o [29]
-_nx_tcp_packet_receive   0x802'8ab1      0x90  Code  Gb  nx_tcp_packet_receive.o [29]
+_nx_tcp_packet_receive   0x802'8b31      0x90  Code  Gb  nx_tcp_packet_receive.o [29]
 _nx_tcp_packet_send_ack
                          0x801'e831      0x2c  Code  Gb  nx_tcp_packet_send_ack.o [29]
 _nx_tcp_packet_send_control
@@ -4935,8 +4942,8 @@ _nx_tcp_packet_send_rst
 _nx_tcp_packet_send_syn
                          0x801'e749      0xe8  Code  Gb  nx_tcp_packet_send_syn.o [29]
 _nx_tcp_periodic_processing
-                         0x802'8f15      0x7a  Code  Gb  nx_tcp_periodic_processing.o [29]
-_nx_tcp_queue_process    0x802'9a95      0x3a  Code  Gb  nx_tcp_queue_process.o [29]
+                         0x802'8f95      0x7a  Code  Gb  nx_tcp_periodic_processing.o [29]
+_nx_tcp_queue_process    0x802'9b15      0x3a  Code  Gb  nx_tcp_queue_process.o [29]
 _nx_tcp_receive_cleanup
                          0x801'dd61      0xd8  Code  Gb  nx_tcp_receive_cleanup.o [29]
 _nx_tcp_server_socket_accept
@@ -5004,7 +5011,7 @@ _nx_tcp_socket_transmit_queue_flush
 _nx_tcp_transmit_cleanup
                          0x801'de39      0xec  Code  Gb  nx_tcp_transmit_cleanup.o [29]
 _nx_tcp_transmit_timer_rate
-                        0x2402'c4b4       0x4  Data  Gb  nx_tcp_initialize.o [29]
+                        0x2402'c4b8       0x4  Data  Gb  nx_tcp_initialize.o [29]
 _nx_tcp_window_scaling_option_get
                          0x801'e061      0x5a  Code  Gb  nx_tcp_window_scaling_option_get.o [29]
 _nx_telnet_server_connect_process
@@ -5050,7 +5057,7 @@ _nx_udp_packet_info_extract
                          0x800'ee31      0x2a  Code  Gb  nx_udp_packet_info_extract.o [29]
 _nx_udp_packet_receive   0x802'4ff9     0x308  Code  Gb  nx_udp_packet_receive.o [29]
 _nx_udp_receive_cleanup
-                         0x802'91e5      0x70  Code  Gb  nx_udp_receive_cleanup.o [29]
+                         0x802'9265      0x70  Code  Gb  nx_udp_receive_cleanup.o [29]
 _nx_udp_socket_bind      0x800'e4dd     0x174  Code  Gb  nx_udp_socket_bind.o [29]
 _nx_udp_socket_create    0x800'dec1      0xc0  Code  Gb  nx_udp_socket_create.o [29]
 _nx_udp_socket_delete    0x800'df91      0x74  Code  Gb  nx_udp_socket_delete.o [29]
@@ -5079,23 +5086,23 @@ _nxd_ipv6_search_onlink
 _nxd_udp_packet_info_extract
                          0x800'fc85      0x96  Code  Gb  nxd_udp_packet_info_extract.o [29]
 _nxd_udp_socket_send     0x800'fdd9     0x1b8  Code  Gb  nxd_udp_socket_send.o [29]
-_tx_build_options       0x2402'c524       0x4  Data  Gb  tx_thread_initialize.o [38]
+_tx_build_options       0x2402'c528       0x4  Data  Gb  tx_thread_initialize.o [38]
 _tx_byte_allocate        0x800'96b9      0xf8  Code  Gb  tx_byte_allocate.o [38]
-_tx_byte_pool_cleanup    0x802'8c59      0x88  Code  Gb  tx_byte_pool_cleanup.o [38]
+_tx_byte_pool_cleanup    0x802'8cd9      0x88  Code  Gb  tx_byte_pool_cleanup.o [38]
 _tx_byte_pool_create     0x800'9619      0xa0  Code  Gb  tx_byte_pool_create.o [38]
 _tx_byte_pool_created_count
-                        0x2402'c4f8       0x4  Data  Gb  tx_initialize_high_level.o [38]
+                        0x2402'c4fc       0x4  Data  Gb  tx_initialize_high_level.o [38]
 _tx_byte_pool_created_ptr
-                        0x2402'c4f4       0x4  Data  Gb  tx_initialize_high_level.o [38]
+                        0x2402'c4f8       0x4  Data  Gb  tx_initialize_high_level.o [38]
 _tx_byte_pool_search     0x800'bc11     0x120  Code  Gb  tx_byte_pool_search.o [38]
 _tx_byte_release         0x800'97b1     0x138  Code  Gb  tx_byte_release.o [38]
 _tx_event_flags_cleanup
-                         0x802'8b41      0x90  Code  Gb  tx_event_flags_cleanup.o [38]
+                         0x802'8bc1      0x90  Code  Gb  tx_event_flags_cleanup.o [38]
 _tx_event_flags_create   0x800'f051      0x5c  Code  Gb  tx_event_flags_create.o [38]
 _tx_event_flags_created_count
-                        0x2402'c4e8       0x4  Data  Gb  tx_initialize_high_level.o [38]
+                        0x2402'c4ec       0x4  Data  Gb  tx_initialize_high_level.o [38]
 _tx_event_flags_created_ptr
-                        0x2402'c4e4       0x4  Data  Gb  tx_initialize_high_level.o [38]
+                        0x2402'c4e8       0x4  Data  Gb  tx_initialize_high_level.o [38]
 _tx_event_flags_delete   0x800'f2b1      0xac  Code  Gb  tx_event_flags_delete.o [38]
 _tx_event_flags_get      0x800'bfe9      0xec  Code  Gb  tx_event_flags_get.o [38]
 _tx_event_flags_set      0x800'c0d5     0x228  Code  Gb  tx_event_flags_set.o [38]
@@ -5110,12 +5117,12 @@ _tx_initialize_kernel_enter
 _tx_initialize_low_level
                          0x800'7b65            Code  Gb  tx_initialize_low_level.o [35]
 _tx_initialize_unused_memory
-                        0x2402'c4fc       0x4  Data  Gb  tx_initialize_high_level.o [38]
-_tx_mutex_cleanup        0x802'83a5      0x7c  Code  Gb  tx_mutex_cleanup.o [38]
+                        0x2402'c500       0x4  Data  Gb  tx_initialize_high_level.o [38]
+_tx_mutex_cleanup        0x802'84bd      0x7c  Code  Gb  tx_mutex_cleanup.o [38]
 _tx_mutex_create         0x800'b78d      0x70  Code  Gb  tx_mutex_create.o [38]
 _tx_mutex_created_count
-                        0x2402'c4f0       0x4  Data  Gb  tx_initialize_high_level.o [38]
-_tx_mutex_created_ptr   0x2402'c4ec       0x4  Data  Gb  tx_initialize_high_level.o [38]
+                        0x2402'c4f4       0x4  Data  Gb  tx_initialize_high_level.o [38]
+_tx_mutex_created_ptr   0x2402'c4f0       0x4  Data  Gb  tx_initialize_high_level.o [38]
 _tx_mutex_delete         0x800'b7fd      0xc4  Code  Gb  tx_mutex_delete.o [38]
 _tx_mutex_get            0x800'b8c1     0x11c  Code  Gb  tx_mutex_get.o [38]
 _tx_mutex_prioritize     0x800'c429      0xb0  Code  Gb  tx_mutex_prioritize.o [38]
@@ -5123,44 +5130,44 @@ _tx_mutex_priority_change
                          0x800'c34d      0xdc  Code  Gb  tx_mutex_priority_change.o [38]
 _tx_mutex_put            0x800'b9dd     0x234  Code  Gb  tx_mutex_put.o [38]
 _tx_mutex_thread_release
-                         0x802'8421      0x46  Code  Gb  tx_mutex_cleanup.o [38]
-_tx_semaphore_cleanup    0x802'8ce1      0x88  Code  Gb  tx_semaphore_cleanup.o [38]
+                         0x802'8539      0x46  Code  Gb  tx_mutex_cleanup.o [38]
+_tx_semaphore_cleanup    0x802'8d61      0x88  Code  Gb  tx_semaphore_cleanup.o [38]
 _tx_semaphore_create     0x802'2009      0x60  Code  Gb  tx_semaphore_create.o [38]
 _tx_semaphore_created_count
-                        0x2402'c4e0       0x4  Data  Gb  tx_initialize_high_level.o [38]
+                        0x2402'c4e4       0x4  Data  Gb  tx_initialize_high_level.o [38]
 _tx_semaphore_created_ptr
-                        0x2402'c4dc       0x4  Data  Gb  tx_initialize_high_level.o [38]
+                        0x2402'c4e0       0x4  Data  Gb  tx_initialize_high_level.o [38]
 _tx_semaphore_delete     0x802'2109      0xac  Code  Gb  tx_semaphore_delete.o [38]
 _tx_semaphore_get        0x802'2069      0xa0  Code  Gb  tx_semaphore_get.o [38]
 _tx_semaphore_put        0x801'a451      0x5c  Code  Gb  tx_semaphore_put.o [38]
 _tx_thread_application_stack_error_handler
-                        0x2402'c528       0x4  Data  Gb  tx_thread_initialize.o [38]
+                        0x2402'c52c       0x4  Data  Gb  tx_thread_initialize.o [38]
 _tx_thread_create        0x800'7fbd     0x18c  Code  Gb  tx_thread_create.o [38]
 _tx_thread_created_count
-                        0x2402'c510       0x4  Data  Gb  tx_thread_initialize.o [38]
-_tx_thread_created_ptr  0x2402'c50c       0x4  Data  Gb  tx_thread_initialize.o [38]
-_tx_thread_current_ptr  0x2402'c504       0x4  Data  Gb  tx_thread_initialize.o [38]
+                        0x2402'c514       0x4  Data  Gb  tx_thread_initialize.o [38]
+_tx_thread_created_ptr  0x2402'c510       0x4  Data  Gb  tx_thread_initialize.o [38]
+_tx_thread_current_ptr  0x2402'c508       0x4  Data  Gb  tx_thread_initialize.o [38]
 _tx_thread_delete        0x800'eef1      0x7c  Code  Gb  tx_thread_delete.o [38]
-_tx_thread_execute_ptr  0x2402'c508       0x4  Data  Gb  tx_thread_initialize.o [38]
+_tx_thread_execute_ptr  0x2402'c50c       0x4  Data  Gb  tx_thread_initialize.o [38]
 _tx_thread_highest_priority
-                        0x2402'c518       0x4  Data  Gb  tx_thread_initialize.o [38]
+                        0x2402'c51c       0x4  Data  Gb  tx_thread_initialize.o [38]
 _tx_thread_identify      0x800'e86d      0x14  Code  Gb  tx_thread_identify.o [38]
 _tx_thread_info_get      0x801'eab9      0x62  Code  Gb  tx_thread_info_get.o [38]
 _tx_thread_initialize    0x800'9379      0x1c  Code  Gb  tx_thread_initialize.o [38]
 _tx_thread_mutex_release
-                        0x2402'c520       0x4  Data  Gb  tx_thread_initialize.o [38]
+                        0x2402'c524       0x4  Data  Gb  tx_thread_initialize.o [38]
 _tx_thread_preempt_disable
-                        0x2402'c51c       0x4  Data  Gb  tx_thread_initialize.o [38]
+                        0x2402'c520       0x4  Data  Gb  tx_thread_initialize.o [38]
 _tx_thread_preemption_change
                          0x800'f645      0x8c  Code  Gb  tx_thread_preemption_change.o [38]
 _tx_thread_priority_list
                         0x2402'bd44      0x80  Data  Gb  tx_thread_initialize.o [38]
 _tx_thread_priority_maps
-                        0x2402'c514       0x4  Data  Gb  tx_thread_initialize.o [38]
+                        0x2402'c518       0x4  Data  Gb  tx_thread_initialize.o [38]
 _tx_thread_relinquish    0x802'639d     0x170  Code  Gb  tx_thread_relinquish.o [38]
 _tx_thread_resume        0x800'f509      0x70  Code  Gb  tx_thread_resume.o [38]
 _tx_thread_schedule      0x800'7c75            Code  Gb  tx_thread_schedule.o [37]
-_tx_thread_shell_entry   0x802'936d      0x5c  Code  Gb  tx_thread_shell_entry.o [38]
+_tx_thread_shell_entry   0x802'93ed      0x5c  Code  Gb  tx_thread_shell_entry.o [38]
 _tx_thread_sleep         0x800'9e25      0x94  Code  Gb  tx_thread_sleep.o [38]
 _tx_thread_stack_analyze
                          0x800'9909      0x84  Code  Gb  tx_thread_stack_analyze.o [38]
@@ -5173,48 +5180,48 @@ _tx_thread_system_preempt_check
 _tx_thread_system_resume
                          0x800'99d1     0x2a4  Code  Gb  tx_thread_system_resume.o [38]
 _tx_thread_system_stack_ptr
-                        0x2402'c500       0x4  Data  Gb  tx_thread_initialize.o [38]
+                        0x2402'c504       0x4  Data  Gb  tx_thread_initialize.o [38]
 _tx_thread_system_state
                         0x2400'0188       0x4  Data  Gb  tx_thread_initialize.o [38]
 _tx_thread_system_suspend
                          0x800'bd31     0x244  Code  Gb  tx_thread_system_suspend.o [38]
 _tx_thread_terminate     0x800'f13d     0x174  Code  Gb  tx_thread_terminate.o [38]
 _tx_thread_time_slice    0x800'a111     0x160  Code  Gb  tx_thread_time_slice.o [38]
-_tx_thread_timeout       0x802'9a59      0x3c  Code  Gb  tx_thread_timeout.o [38]
+_tx_thread_timeout       0x802'9ad9      0x3c  Code  Gb  tx_thread_timeout.o [38]
 _tx_time_get             0x800'c2fd      0x14  Code  Gb  tx_time_get.o [38]
 _tx_timer_activate       0x800'f4dd      0x2a  Code  Gb  tx_timer_activate.o [38]
 _tx_timer_create         0x800'ef6d      0x88  Code  Gb  tx_timer_create.o [38]
 _tx_timer_created_count
-                        0x2402'c548       0x4  Data  Gb  tx_timer_initialize.o [38]
-_tx_timer_created_ptr   0x2402'c544       0x4  Data  Gb  tx_timer_initialize.o [38]
-_tx_timer_current_ptr   0x2402'c53c       0x4  Data  Gb  tx_timer_initialize.o [38]
+                        0x2402'c54c       0x4  Data  Gb  tx_timer_initialize.o [38]
+_tx_timer_created_ptr   0x2402'c548       0x4  Data  Gb  tx_timer_initialize.o [38]
+_tx_timer_current_ptr   0x2402'c540       0x4  Data  Gb  tx_timer_initialize.o [38]
 _tx_timer_deactivate     0x800'f579      0xcc  Code  Gb  tx_timer_deactivate.o [38]
 _tx_timer_delete         0x800'eff5      0x5c  Code  Gb  tx_timer_delete.o [38]
 _tx_timer_expiration_process
                          0x800'a0e9      0x28  Code  Gb  tx_timer_expiration_process.o [38]
-_tx_timer_expired       0x2402'c540       0x4  Data  Gb  tx_timer_initialize.o [38]
+_tx_timer_expired       0x2402'c544       0x4  Data  Gb  tx_timer_initialize.o [38]
 _tx_timer_expired_time_slice
-                        0x2402'c530       0x4  Data  Gb  tx_timer_initialize.o [38]
+                        0x2402'c534       0x4  Data  Gb  tx_timer_initialize.o [38]
 _tx_timer_expired_timer_ptr
-                        0x2402'c54c       0x4  Data  Gb  tx_timer_initialize.o [38]
+                        0x2402'c550       0x4  Data  Gb  tx_timer_initialize.o [38]
 _tx_timer_initialize     0x800'9395      0x9c  Code  Gb  tx_timer_initialize.o [38]
 _tx_timer_interrupt      0x800'92c1            Code  Gb  tx_timer_interrupt.o [37]
 _tx_timer_list          0x2402'bdc4      0x80  Data  Gb  tx_timer_initialize.o [38]
-_tx_timer_list_end      0x2402'c538       0x4  Data  Gb  tx_timer_initialize.o [38]
-_tx_timer_list_start    0x2402'c534       0x4  Data  Gb  tx_timer_initialize.o [38]
-_tx_timer_priority      0x2402'c558       0x4  Data  Gb  tx_timer_initialize.o [38]
-_tx_timer_stack_size    0x2402'c554       0x4  Data  Gb  tx_timer_initialize.o [38]
-_tx_timer_stack_start   0x2402'c550       0x4  Data  Gb  tx_timer_initialize.o [38]
+_tx_timer_list_end      0x2402'c53c       0x4  Data  Gb  tx_timer_initialize.o [38]
+_tx_timer_list_start    0x2402'c538       0x4  Data  Gb  tx_timer_initialize.o [38]
+_tx_timer_priority      0x2402'c55c       0x4  Data  Gb  tx_timer_initialize.o [38]
+_tx_timer_stack_size    0x2402'c558       0x4  Data  Gb  tx_timer_initialize.o [38]
+_tx_timer_stack_start   0x2402'c554       0x4  Data  Gb  tx_timer_initialize.o [38]
 _tx_timer_system_activate
                          0x800'c4d9      0x68  Code  Gb  tx_timer_system_activate.o [38]
-_tx_timer_system_clock  0x2402'c52c       0x4  Data  Gb  tx_timer_initialize.o [38]
+_tx_timer_system_clock  0x2402'c530       0x4  Data  Gb  tx_timer_initialize.o [38]
 _tx_timer_system_deactivate
                          0x800'bf75      0x2e  Code  Gb  tx_timer_system_deactivate.o [38]
 _tx_timer_thread        0x2402'b93c      0xbc  Data  Gb  tx_timer_initialize.o [38]
 _tx_timer_thread_entry   0x802'735d     0x13c  Code  Gb  tx_timer_thread_entry.o [38]
 _tx_timer_thread_stack_area
                         0x2402'9898     0x400  Data  Gb  tx_timer_initialize.o [38]
-_tx_timer_time_slice    0x2402'c55c       0x4  Data  Gb  tx_timer_initialize.o [38]
+_tx_timer_time_slice    0x2402'c560       0x4  Data  Gb  tx_timer_initialize.o [38]
 _txe_byte_allocate       0x800'7e15      0x98  Code  Gb  txe_byte_allocate.o [38]
 _txe_byte_pool_create    0x800'7d35      0xe0  Code  Gb  txe_byte_pool_create.o [38]
 _txe_byte_release        0x800'7ead      0x54  Code  Gb  txe_byte_release.o [38]
@@ -5246,44 +5253,44 @@ _txe_timer_create        0x800'e111      0xf0  Code  Gb  txe_timer_create.o [38]
 _txe_timer_deactivate    0x800'e84d      0x20  Code  Gb  txe_timer_deactivate.o [38]
 _txe_timer_delete        0x800'e255      0x54  Code  Gb  txe_timer_delete.o [38]
 _ux_dcd_stm32_endpoint_create
-                         0x802'897b      0x4e  Code  Gb  ux_dcd_stm32_endpoint_create.o [42]
+                         0x802'89fb      0x4e  Code  Gb  ux_dcd_stm32_endpoint_create.o [42]
 _ux_dcd_stm32_endpoint_destroy
-                         0x802'89c9      0x16  Code  Gb  ux_dcd_stm32_endpoint_destroy.o [42]
+                         0x802'8a49      0x16  Code  Gb  ux_dcd_stm32_endpoint_destroy.o [42]
 _ux_dcd_stm32_endpoint_reset
-                         0x802'89df      0x1e  Code  Gb  ux_dcd_stm32_endpoint_reset.o [42]
+                         0x802'8a5f      0x1e  Code  Gb  ux_dcd_stm32_endpoint_reset.o [42]
 _ux_dcd_stm32_endpoint_stall
                          0x801'95f5      0x1e  Code  Gb  ux_dcd_stm32_endpoint_stall.o [42]
 _ux_dcd_stm32_endpoint_status
-                         0x802'89fd      0x1e  Code  Gb  ux_dcd_stm32_endpoint_status.o [42]
+                         0x802'8a7d      0x1e  Code  Gb  ux_dcd_stm32_endpoint_status.o [42]
 _ux_dcd_stm32_frame_number_get
-                         0x802'88f9       0x4  Code  Gb  ux_dcd_stm32_frame_number_get.o [42]
-_ux_dcd_stm32_function   0x802'8865      0x94  Code  Gb  ux_dcd_stm32_function.o [42]
+                         0x802'8979       0x4  Code  Gb  ux_dcd_stm32_frame_number_get.o [42]
+_ux_dcd_stm32_function   0x802'88e5      0x94  Code  Gb  ux_dcd_stm32_function.o [42]
 _ux_dcd_stm32_initialize
                          0x802'7921      0x38  Code  Gb  ux_dcd_stm32_initialize.o [42]
 _ux_dcd_stm32_initialize_complete
                          0x801'96a9     0x130  Code  Gb  ux_dcd_stm32_initialize_complete.o [42]
 _ux_dcd_stm32_transfer_request
-                         0x802'88fd      0x7e  Code  Gb  ux_dcd_stm32_transfer_request.o [42]
+                         0x802'897d      0x7e  Code  Gb  ux_dcd_stm32_transfer_request.o [42]
 _ux_device_class_cdc_acm_activate
-                         0x802'965f      0x1c  Code  Gb  ux_device_class_cdc_acm_activate.o [40]
+                         0x802'96df      0x1c  Code  Gb  ux_device_class_cdc_acm_activate.o [40]
 _ux_device_class_cdc_acm_bulkin_thread
-                         0x802'8475      0xd0  Code  Gb  ux_device_class_cdc_acm_bulkin_thread.o [40]
+                         0x802'858d      0xd0  Code  Gb  ux_device_class_cdc_acm_bulkin_thread.o [40]
 _ux_device_class_cdc_acm_bulkout_thread
-                         0x802'9101      0x74  Code  Gb  ux_device_class_cdc_acm_bulkout_thread.o [40]
+                         0x802'9181      0x74  Code  Gb  ux_device_class_cdc_acm_bulkout_thread.o [40]
 _ux_device_class_cdc_acm_control_request
                          0x802'8121      0xe0  Code  Gb  ux_device_class_cdc_acm_control_request.o [40]
 _ux_device_class_cdc_acm_deactivate
-                         0x802'967b      0x4c  Code  Gb  ux_device_class_cdc_acm_deactivate.o [40]
+                         0x802'96fb      0x4c  Code  Gb  ux_device_class_cdc_acm_deactivate.o [40]
 _ux_device_class_cdc_acm_entry
-                         0x802'95ed      0x4e  Code  Gb  ux_device_class_cdc_acm_entry.o [40]
+                         0x802'966d      0x4e  Code  Gb  ux_device_class_cdc_acm_entry.o [40]
 _ux_device_class_cdc_acm_initialize
-                         0x802'8d69      0x88  Code  Gb  ux_device_class_cdc_acm_initialize.o [40]
+                         0x802'8de9      0x88  Code  Gb  ux_device_class_cdc_acm_initialize.o [40]
 _ux_device_class_cdc_acm_ioctl
                          0x802'25f9     0x284  Code  Gb  ux_device_class_cdc_acm_ioctl.o [40]
 _ux_device_class_cdc_acm_read
                          0x802'297d      0xf4  Code  Gb  ux_device_class_cdc_acm_read.o [40]
 _ux_device_class_cdc_acm_uninitialize
-                         0x802'963b      0x24  Code  Gb  ux_device_class_cdc_acm_unitialize.o [40]
+                         0x802'96bb      0x24  Code  Gb  ux_device_class_cdc_acm_unitialize.o [40]
 _ux_device_class_cdc_acm_write
                          0x802'287d     0x100  Code  Gb  ux_device_class_cdc_acm_write.o [40]
 _ux_device_class_rndis_activate
@@ -5295,13 +5302,13 @@ _ux_device_class_rndis_bulkout_thread
 _ux_device_class_rndis_control_request
                          0x802'7e8d      0xe4  Code  Gb  ux_device_class_rndis_control_request.o [40]
 _ux_device_class_rndis_deactivate
-                         0x802'93c9      0x58  Code  Gb  ux_device_class_rndis_deactivate.o [40]
+                         0x802'9449      0x58  Code  Gb  ux_device_class_rndis_deactivate.o [40]
 _ux_device_class_rndis_entry
-                         0x802'94f9      0x52  Code  Gb  ux_device_class_rndis_entry.o [40]
+                         0x802'9579      0x52  Code  Gb  ux_device_class_rndis_entry.o [40]
 _ux_device_class_rndis_initialize
                          0x802'5301     0x2c4  Code  Gb  ux_device_class_rndis_initialize.o [40]
 _ux_device_class_rndis_interrupt_thread
-                         0x802'9255      0x60  Code  Gb  ux_device_class_rndis_interrupt_thread.o [40]
+                         0x802'92d5      0x60  Code  Gb  ux_device_class_rndis_interrupt_thread.o [40]
 _ux_device_class_rndis_msg_initialize
                          0x802'7f71      0xd0  Code  Gb  ux_device_class_rndis_msg_initialize.o [40]
 _ux_device_class_rndis_msg_keep_alive
@@ -5313,17 +5320,17 @@ _ux_device_class_rndis_msg_reset
 _ux_device_class_rndis_msg_set
                          0x802'8041      0x54  Code  Gb  ux_device_class_rndis_msg_set.o [40]
 _ux_device_class_rndis_write
-                         0x802'97f9      0x4a  Code  Gb  ux_device_class_rndis_write.o [40]
+                         0x802'9879      0x4a  Code  Gb  ux_device_class_rndis_write.o [40]
 _ux_device_class_storage_activate
-                         0x802'949d      0x26  Code  Gb  ux_device_class_storage_activate.o [40]
+                         0x802'951d      0x26  Code  Gb  ux_device_class_storage_activate.o [40]
 _ux_device_class_storage_control_request
-                         0x802'8a1d      0x94  Code  Gb  ux_device_class_storage_control_request.o [40]
+                         0x802'8a9d      0x94  Code  Gb  ux_device_class_storage_control_request.o [40]
 _ux_device_class_storage_csw_send
                          0x802'62a9      0x58  Code  Gb  ux_device_class_storage_csw_send.o [40]
 _ux_device_class_storage_deactivate
-                         0x802'94c3      0x36  Code  Gb  ux_device_class_storage_deactivate.o [40]
+                         0x802'9543      0x36  Code  Gb  ux_device_class_storage_deactivate.o [40]
 _ux_device_class_storage_entry
-                         0x802'9421      0x58  Code  Gb  ux_device_class_storage_entry.o [40]
+                         0x802'94a1      0x58  Code  Gb  ux_device_class_storage_entry.o [40]
 _ux_device_class_storage_format
                          0x802'5b0d      0x24  Code  Gb  ux_device_class_storage_format.o [40]
 _ux_device_class_storage_initialize
@@ -5353,7 +5360,7 @@ _ux_device_class_storage_test_ready
 _ux_device_class_storage_thread
                          0x802'576d     0x2c0  Code  Gb  ux_device_class_storage_thread.o [40]
 _ux_device_class_storage_uninitialize
-                         0x802'9479      0x24  Code  Gb  ux_device_class_storage_uninitialize.o [40]
+                         0x802'94f9      0x24  Code  Gb  ux_device_class_storage_uninitialize.o [40]
 _ux_device_class_storage_verify
                          0x802'5d65       0x8  Code  Gb  ux_device_class_storage_verify.o [40]
 _ux_device_class_storage_write
@@ -5408,7 +5415,7 @@ _ux_network_driver_link_down
                          0x802'136d       0xe  Code  Gb  ux_network_driver.o [41]
 _ux_network_driver_packet_received
                          0x802'12f1      0x7c  Code  Gb  ux_network_driver.o [41]
-_ux_system              0x2402'c59c       0x4  Data  Gb  ux_system_initialize.o [39]
+_ux_system              0x2402'c5a0       0x4  Data  Gb  ux_system_initialize.o [39]
 _ux_system_bos_descriptor_structure
                         0x2400'02f8       0x4  Data  Gb  ux_system_initialize.o [39]
 _ux_system_configuration_descriptor_structure
@@ -5422,7 +5429,7 @@ _ux_system_error_handler
 _ux_system_initialize    0x802'7819     0x108  Code  Gb  ux_system_initialize.o [39]
 _ux_system_interface_descriptor_structure
                         0x2400'02ec       0xc  Data  Gb  ux_system_initialize.o [39]
-_ux_system_slave        0x2402'c594       0x4  Data  Gb  ux_device_stack_initialize.o [39]
+_ux_system_slave        0x2402'c598       0x4  Data  Gb  ux_device_stack_initialize.o [39]
 _ux_system_slave_class_cdc_acm_name
                         0x2400'029c      0x18  Data  Gb  ux_device_stack_initialize.o [39]
 _ux_system_slave_class_rndis_name
@@ -5501,23 +5508,23 @@ app_log                 0x2401'fbb4    0x2a80  Data  Gb  logger.o [1]
 ascii_to_hex             0x801'2e19      0x2a  Code  Gb  Params_editor.o [7]
 cdc_acm_parameter       0x2402'c408       0xc  Data  Gb  USB_CDC_driver.o [6]
 check_sd_status          0x800'8ae9      0x34  Code  Lc  USB_MSC_driver.o [6]
-digits                   0x802'9574      0x28  Data  Lc  iar_Stoulx.o [43]
-digits                   0x802'95c4      0x28  Data  Lc  iar_Stoullx.o [43]
+digits                   0x802'95f4      0x28  Data  Lc  iar_Stoulx.o [43]
+digits                   0x802'9644      0x28  Data  Lc  iar_Stoullx.o [43]
 dwvar                    0x802'7b7c     0x100  Data  Gb  BKMAN2_1_Params.o [5]
-exit                     0x802'a147       0x4  Code  Gb  exit.o [43]
-f_unsent_record         0x2402'c5b8       0x1  Data  Gb  FreeMaster_thread.o [1]
+exit                     0x802'a1e7       0x4  Code  Gb  exit.o [43]
+f_unsent_record         0x2402'c5bc       0x1  Data  Gb  FreeMaster_thread.o [1]
 fm_pipe                 0x2402'c450       0x4  Data  Gb  FreeMaster_thread.o [1]
-fmstr_appCmd            0x2402'c5b2       0x1  Data  Lc  freemaster_appcmd.o [3]
+fmstr_appCmd            0x2402'c5b6       0x1  Data  Lc  freemaster_appcmd.o [3]
 fmstr_appCmdBuff        0x2402'c36c      0x20  Data  Lc  freemaster_appcmd.o [3]
 fmstr_appCmdCallFunc    0x2402'c3c8      0x10  Data  Lc  freemaster_appcmd.o [3]
 fmstr_appCmdCallId      0x2402'c434       0x4  Data  Lc  freemaster_appcmd.o [3]
 fmstr_appCmdLen         0x2402'c430       0x4  Data  Lc  freemaster_appcmd.o [3]
-fmstr_appCmdResult      0x2402'c5b3       0x1  Data  Lc  freemaster_appcmd.o [3]
+fmstr_appCmdResult      0x2402'c5b7       0x1  Data  Lc  freemaster_appcmd.o [3]
 fmstr_appCmdResultDataLen
-                        0x2402'c5b4       0x1  Data  Lc  freemaster_appcmd.o [3]
-fmstr_nRxCrc8           0x2402'c5b7       0x1  Data  Lc  freemaster_serial.o [3]
-fmstr_nRxTodo           0x2402'c5b6       0x1  Data  Lc  freemaster_serial.o [3]
-fmstr_nTxTodo           0x2402'c5b5       0x1  Data  Lc  freemaster_serial.o [3]
+                        0x2402'c5b8       0x1  Data  Lc  freemaster_appcmd.o [3]
+fmstr_nRxCrc8           0x2402'c5bb       0x1  Data  Lc  freemaster_serial.o [3]
+fmstr_nRxTodo           0x2402'c5ba       0x1  Data  Lc  freemaster_serial.o [3]
+fmstr_nTxTodo           0x2402'c5b9       0x1  Data  Lc  freemaster_serial.o [3]
 fmstr_pCommBuffer       0x2402'b46c      0xf8  Data  Lc  freemaster_serial.o [3]
 fmstr_pOwnRecBuffer     0x2402'4678    0x1000  Data  Lc  freemaster_rec.o [3]
 fmstr_pRxBuff           0x2402'c440       0x4  Data  Lc  freemaster_serial.o [3]
@@ -5532,9 +5539,10 @@ frexp                    0x801'5c49            Code  Gb  frexp.o [44]
 frexpl                   0x801'5c49            Code  Gb  frexp.o [44]
 frm_drv                 0x2402'c444       0x4  Data  Gb  FreeMaster_thread.o [1]
 g_app_pool              0x2402'c290      0x34  Data  Gb  Mem_man.o [1]
-g_app_pool_memory       0x2402'c474       0x4  Data  Gb  Mem_man.o [1]
-g_app_pool_size         0x2402'c478       0x4  Data  Gb  Mem_man.o [1]
+g_app_pool_memory       0x2402'c478       0x4  Data  Gb  Mem_man.o [1]
+g_app_pool_size         0x2402'c47c       0x4  Data  Gb  Mem_man.o [1]
 g_cpu_usage             0x2402'c470       0x4  Data  Gb  IDLE_task.o [1]
+g_cpu_usage_fp          0x2402'c474       0x4  Data  Gb  IDLE_task.o [1]
 hadc1                   0x2402'bf2c      0x64  Data  Gb  adc.o [2]
 hadc2                   0x2402'bf90      0x64  Data  Gb  adc.o [2]
 hadc3                   0x2402'bff4      0x64  Data  Gb  adc.o [2]
@@ -5574,11 +5582,11 @@ mon_usbfs_vcom0_drv_driver
                         0x2400'018c      0x20  Data  Gb  USB_CDC_driver.o [6]
 mparams                 0x2402'ae38      0x18  Data  Lc  dlmalloc.o [43]
 mtx                     0x2402'c3f8      0x10  Data  Lc  xsyslock_mtx.o [47]
-ndigs                    0x802'954c      0x28  Data  Lc  iar_Stoulx.o [43]
-ndigs                    0x802'959c      0x28  Data  Lc  iar_Stoullx.o [43]
+ndigs                    0x802'95cc      0x28  Data  Lc  iar_Stoulx.o [43]
+ndigs                    0x802'961c      0x28  Data  Lc  iar_Stoullx.o [43]
 net_packet_pool         0x2402'c220      0x3c  Data  Gb  Net_common.o [4]
 net_packet_pool_buffer  0x2400'0414  0x1'f7a0  Data  Gb  Net_common.o [4]
-nv_store_ok             0x2402'c5ba       0x1  Data  Gb  NV_store.o [5]
+nv_store_ok             0x2402'c5be       0x1  Data  Gb  NV_store.o [5]
 out_buff                0x2402'c1e0      0x40  Data  Lc  freemaster_serial.o [3]
 pDevFrameWorkDesc_FS    0x2400'01c0       0x4  Data  Lc  USB_descriptors_builder.o [6]
 pDevFrameWorkDesc_HS    0x2400'01c4       0x4  Data  Lc  USB_descriptors_builder.o [6]
@@ -5588,29 +5596,29 @@ p_log_rec               0x2402'c454       0x4  Data  Gb  FreeMaster_thread.o [1]
 p_vt100_stacks          0x2402'c420       0x8  Data  Lc  MonitorVT100.o [7]
 p_vt100_task_cbls       0x2402'c428       0x8  Data  Gb  MonitorVT100.o [7]
 params_tables_info      0x2400'00a8       0xc  Data  Gb  BKMAN2_1_Params_dyn_tables.o [5]
-parmenu                  0x802'9c14      0x30  Data  Gb  BKMAN2_1_Params.o [5]
+parmenu                  0x802'9c94      0x30  Data  Gb  BKMAN2_1_Params.o [5]
 pcm_pipes               0x2402'aff0     0x144  Data  Lc  freemaster_pipes.o [3]
 pipeRxBuff              0x2402'c448       0x4  Data  Gb  FreeMaster_thread.o [1]
-pipeRxSize              0x2402'c5a8       0x2  Data  Gb  FreeMaster_thread.o [1]
+pipeRxSize              0x2402'c5ac       0x2  Data  Gb  FreeMaster_thread.o [1]
 pipeTxBuff              0x2402'c44c       0x4  Data  Gb  FreeMaster_thread.o [1]
-pipeTxSize              0x2402'c5aa       0x2  Data  Gb  FreeMaster_thread.o [1]
-pows                     0x802'98d0      0x48  Data  Lc  strto64.o [44]
+pipeTxSize              0x2402'c5ae       0x2  Data  Gb  FreeMaster_thread.o [1]
+pows                     0x802'9950      0x48  Data  Lc  strto64.o [44]
 rand                     0x800'f35d      0x90  Code  Gb  rand.o [43]
 ranmatch                 0x801'581b      0x4c  Code  Lc  xscanffull_nomb.o [43]
 ref_time                0x2402'c418       0x8  Data  Gb  IDLE_task.o [1]
-request_save_to_NV_mem  0x2402'c5bb       0x1  Data  Gb  Params_editor.o [7]
+request_save_to_NV_mem  0x2402'c5bf       0x1  Data  Gb  Params_editor.o [7]
 rndis_dhcp_server       0x2402'2634    0x2044  Data  Lc  USB_RNDIS_driver.o [6]
 rndis_dhcp_server_active
-                        0x2402'c5be       0x1  Data  Lc  USB_RNDIS_driver.o [6]
+                        0x2402'c5c2       0x1  Data  Lc  USB_RNDIS_driver.o [6]
 rndis_dhcp_server_stack_memory
                         0x2402'a098     0x400  Data  Gb  USB_RNDIS_driver.o [6]
-rndis_interface_active  0x2402'c5bc       0x1  Data  Lc  USB_RNDIS_driver.o [6]
+rndis_interface_active  0x2402'c5c0       0x1  Data  Lc  USB_RNDIS_driver.o [6]
 rndis_ip                0x2402'5678     0xff4  Data  Gb  USB_RNDIS_driver.o [6]
 rndis_ip_arp_cache_memory
                         0x2402'a858     0x208  Data  Gb  USB_RNDIS_driver.o [6]
 rndis_ip_stack_memory   0x2402'9c98     0x400  Data  Gb  USB_RNDIS_driver.o [6]
 rndis_net_props         0x2402'c3ac      0x1c  Data  Lc  USB_RNDIS_driver.o [6]
-rndis_network_active    0x2402'c5bd       0x1  Data  Lc  USB_RNDIS_driver.o [6]
+rndis_network_active    0x2402'c5c1       0x1  Data  Lc  USB_RNDIS_driver.o [6]
 rndis_parameter         0x2402'bec0      0x6c  Data  Lc  USB_RNDIS_driver.o [6]
 rndis_telnet_cbl        0x2402'8bd8     0x4b8  Data  Gb  Net_Telnet.o [4]
 rndis_telnet_server     0x2402'8500     0x6d8  Data  Gb  USB_RNDIS_driver.o [6]
@@ -5624,7 +5632,7 @@ scalbn                   0x801'5ce5            Code  Gb  ldexp.o [44]
 scalbnl                  0x801'5ce5            Code  Gb  ldexp.o [44]
 scale                    0x801'4c0d      0x46  Code  Lc  xprintffull_nomb.o [43]
 sd_is_detected          0x2400'0411       0x1  Data  Lc  USB_MSC_driver.o [6]
-sec_hand                0x2402'c5a0       0x4  Data  Lc  xfail_s.o [43]
+sec_hand                0x2402'c5a4       0x4  Data  Lc  xfail_s.o [43]
 segment_holding          0x800'a2ad      0x1c  Code  Lc  dlmalloc.o [43]
 snprintf                 0x801'35e9      0x44  Code  Gb  snprintf.o [43]
 sprintf                  0x801'3571      0x40  Code  Gb  sprintf.o [43]
@@ -5641,9 +5649,9 @@ strtold                  0x801'3a69       0x6  Code  Gb  strto64.o [44]
 strtoll                  0x801'6711       0x2  Code  Gb  iar_Stollx.o [43]
 strtoull                 0x801'6669       0x2  Code  Gb  iar_Stoullx.o [43]
 task_freemaster_created
-                        0x2402'c5b9       0x1  Data  Lc  FreeMaster_thread.o [1]
+                        0x2402'c5bd       0x1  Data  Lc  FreeMaster_thread.o [1]
 tbl_client_ap_list      0x2400'0000      0xa8  Data  Gb  BKMAN2_1_Params_dyn_tables.o [5]
-telnet_connected        0x2402'c47c       0x4  Data  Lc  Net_Telnet.o [4]
+telnet_connected        0x2402'c480       0x4  Data  Lc  Net_Telnet.o [4]
 thread_idle_stack       0x2402'aa60     0x200  Data  Gb  IDLE_task.o [1]
 thread_main_stack       0x2402'9498     0x400  Data  Gb  Main.o [1]
 time_delay               0x800'9da1      0x18  Code  Gb  Time_utils.o [1]
@@ -5653,14 +5661,14 @@ tx_application_define    0x800'318b      0x36  Code  Gb  Main.o [1]
 tx_thread_fpu_disable    0x800'7d23            Code  Gb  tx_thread_schedule.o [37]
 tx_thread_fpu_enable     0x800'7d23            Code  Gb  tx_thread_schedule.o [37]
 usb1_cdc_line_coding    0x2400'01ac       0x8  Data  Gb  USB_CDC_driver.o [6]
-usb1_cdc_line_state     0x2402'c5ae       0x2  Data  Gb  USB_CDC_driver.o [6]
+usb1_cdc_line_state     0x2402'c5b2       0x2  Data  Gb  USB_CDC_driver.o [6]
 usb_msc_flag_grp        0x2402'c348      0x24  Data  Gb  USB_device_init.o [6]
 usb_network_devices     0x2402'a498     0x3c0  Data  Lc  ux_network_driver.o [41]
 usb_network_driver_initialized
-                        0x2402'c598       0x4  Data  Lc  ux_network_driver.o [41]
+                        0x2402'c59c       0x4  Data  Lc  ux_network_driver.o [41]
 usbd1_cbl               0x2402'666c     0xb48  Data  Gb  USB_CDC_driver.o [6]
 usbd2_cbl               0x2402'71b4     0xb48  Data  Gb  USB_CDC_driver.o [6]
-uwTick                  0x2402'c4bc       0x4  Data  Gb  stm32h7xx_hal.o [33]
+uwTick                  0x2402'c4c0       0x4  Data  Gb  stm32h7xx_hal.o [33]
 uwTickFreq              0x2400'0410       0x1  Data  Gb  stm32h7xx_hal.o [33]
 uwTickPrio              0x2400'017c       0x4  Data  Gb  stm32h7xx_hal.o [33]
 ux_cdc_device0_instance_activate
@@ -5672,7 +5680,7 @@ ux_cdc_device0_parameter_change
 ux_device_class_rndis_oid_supported_list
                         0x2400'01c8      0x7c  Data  Gb  ux_device_class_rndis_initialize.o [40]
 vsnprintf                0x801'62b9      0x3c  Code  Gb  vsnprint.o [43]
-vt100_allocations       0x2402'c5ac       0x2  Data  Lc  MonitorVT100.o [7]
+vt100_allocations       0x2402'c5b0       0x2  Data  Lc  MonitorVT100.o [7]
 wvar                    0x2402'bcc0      0x84  Data  Gb  Main.o [1]
 
 
@@ -5724,9 +5732,9 @@ wvar                    0x2402'bcc0      0x84  Data  Gb  Main.o [1]
 [46] = shb_l.a
 [47] = th7M_tlf.a
 
-  169'665 bytes of readonly  code memory
-    6'303 bytes of readonly  data memory
-  183'245 bytes of readwrite data memory
+  169'791 bytes of readonly  code memory
+    6'336 bytes of readonly  data memory
+  183'249 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

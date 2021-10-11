@@ -7,6 +7,7 @@ uint8_t                       thread_idle_stack[THREAD_IDLE_STACK_SIZE];
 
 uint64_t                      ref_time;             // Калибровочная константа предназначенная для измерения нагрузки микропроцессора
 volatile uint32_t             g_cpu_usage;
+volatile float                g_cpu_usage_fp;
 /*-------------------------------------------------------------------------------------------------------------
   Фоновая задача.
   Измеряет загруженность процессора
@@ -29,6 +30,7 @@ static void Thread_idle(ULONG initial_input)
       dt = t - ref_time;
     }
     g_cpu_usage =(1000ull * dt) / ref_time;
+    g_cpu_usage_fp = (float)dt*100.0f/(float)ref_time;
 
 //    if (request_save_to_NV_mem)
 //    {

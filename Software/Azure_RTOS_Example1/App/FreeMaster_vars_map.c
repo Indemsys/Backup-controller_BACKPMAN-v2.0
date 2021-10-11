@@ -7,7 +7,8 @@
 FMSTR_TSA_TABLE_BEGIN(app_vars)
 
 
-FMSTR_TSA_RW_VAR( g_cpu_usage                         ,FMSTR_TSA_UINT32     )
+FMSTR_TSA_RW_VAR( g_cpu_usage                            ,FMSTR_TSA_UINT32     )
+FMSTR_TSA_RW_VAR( g_cpu_usage_fp                         ,FMSTR_TSA_FLOAT      )
 // FMSTR_TSA_RW_VAR( DCDC_DAC_comm_errors                ,FMSTR_TSA_UINT32     )
 //
 // FMSTR_TSA_RW_VAR( sig_oledv                           ,FMSTR_TSA_SINT32     )

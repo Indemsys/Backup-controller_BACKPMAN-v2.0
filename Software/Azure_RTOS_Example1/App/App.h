@@ -96,6 +96,7 @@ extern         WVAR_TYPE       wvar;
 extern const   T_work_params   dwvar[];
 extern uint64_t                ref_time;             // Калибровочная константа предназначенная для измерения нагрузки микропроцессора
 extern volatile uint32_t       g_cpu_usage;
+extern volatile float          g_cpu_usage_fp;
 
 #endif
 
