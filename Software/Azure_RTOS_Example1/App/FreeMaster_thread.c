@@ -12,7 +12,7 @@ FMSTR_TSA_TABLE(app_vars)
 
 FMSTR_TSA_TABLE_LIST_END()
 
-T_monitor_driver           *frm_drv;
+T_serial_io_driver           *frm_drv;
 
 
 #define FM_PIPE_RX_BUF_SIZE 64
@@ -47,14 +47,14 @@ static void Thread_freemaster(ULONG initial_data);
 -----------------------------------------------------------------------------------------------------*/
 uint32_t FreeMaster_task_create(ULONG initial_data)
 {
-  UINT              err;
-  T_monitor_driver *p_drv;
+  UINT                err;
+  T_serial_io_driver *p_drv;
 
   if (task_freemaster_created != 0) return RES_ERROR;
 
   // Инициализируем драйвер
   // Выделяется память драйвера, создается задача приема драйвера
-  p_drv = (T_monitor_driver *)initial_data;
+  p_drv = (T_serial_io_driver *)initial_data;
   if (p_drv->_init(&p_drv->pdrvcbl, p_drv) != RES_OK) return RES_ERROR;
 
   p_freemaster_stack = App_malloc(THREAD_FREEMASTER_STACK_SIZE);
@@ -204,7 +204,7 @@ static void Thread_freemaster(ULONG initial_data)
   tx_thread_identify()->driver =  initial_data;
 
   // Получаем указатель на драйвер последовательного интерфейса
-  frm_drv = (T_monitor_driver *)(tx_thread_identify()->driver);
+  frm_drv = (T_serial_io_driver *)(tx_thread_identify()->driver);
 
   if (!FMSTR_Init())
   {

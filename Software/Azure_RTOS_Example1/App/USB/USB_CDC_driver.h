@@ -43,8 +43,8 @@ typedef struct
 } T_usbfs_drv_cbl;
 
 
-T_monitor_driver* Mnsdrv_get_usbfs_vcom0_driver(void);
-T_monitor_driver* Mnsdrv_get_usbfs_vcom1_driver(void);
+T_serial_io_driver* Mnsdrv_get_usbfs_vcom0_driver(void);
+T_serial_io_driver* Mnsdrv_get_usbfs_vcom1_driver(void);
 
 
 VOID    ux_cdc_device0_instance_activate(VOID *cdc_instance);

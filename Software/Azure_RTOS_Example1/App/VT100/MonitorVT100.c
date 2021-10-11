@@ -100,11 +100,11 @@ static void Task_VT100(ULONG initial_data);
 
   \param void
 -----------------------------------------------------------------------------------------------------*/
-uint32_t Task_VT100_create(T_monitor_driver* p_driver, int32_t *alloc_indx)
+uint32_t Task_VT100_create(T_serial_io_driver* p_driver, int32_t *alloc_indx)
 {
-  UINT              err;
-  T_monitor_driver *p_drv;
-  int32_t           indx = -1;
+  UINT                err;
+  T_serial_io_driver *p_drv;
+  int32_t             indx = -1;
 
   if (alloc_indx != 0) *alloc_indx = indx;
 

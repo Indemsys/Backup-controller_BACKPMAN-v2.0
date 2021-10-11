@@ -20,7 +20,7 @@
 #include "freemaster_protocol.h"
 #include "freemaster_utils.h"
 
-extern T_monitor_driver *frm_drv;
+extern T_serial_io_driver *frm_drv;
 
 /* FreeMASTER communication buffer (in/out) plus the STS, LEN(LEB) and CRC bytes */
 static uint8_t fmstr_pCommBuffer[FMSTR_COMM_BUFFER_SIZE + 1 + 4 + 2];

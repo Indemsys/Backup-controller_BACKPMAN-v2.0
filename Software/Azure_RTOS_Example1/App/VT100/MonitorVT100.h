@@ -118,7 +118,7 @@ typedef struct
     uint8_t               current_col;
     uint8_t               current_pos;
     int32_t               g_access_to_spec_menu;
-    T_monitor_driver      *pdrv;                         // Указатель на драйвер
+    T_serial_io_driver    *pdrv;                         // Указатель на драйвер
 
 } T_monitor_cbl;
 
@@ -150,7 +150,7 @@ typedef struct
 extern const T_VT100_Menu MENU_MAIN;
 
 
-uint32_t     Task_VT100_create(T_monitor_driver* p_driver, int32_t *alloc_indx);
+uint32_t     Task_VT100_create(T_serial_io_driver* p_driver, int32_t *alloc_indx);
 uint32_t     Task_VT100_delete(int32_t *alloc_indx);
 
 void         VT100_clr_screen(void);

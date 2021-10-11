@@ -21,12 +21,12 @@ typedef struct
 {
     const uint32_t   mark;
     const int        driver_type;
-    int              (*_init)(void **pcbl, void *pdrv);
-    int              (*_send_buf)(const void *buf, unsigned int len);
-    int              (*_wait_char)(unsigned char *b,  int ticks); // ticks - время ожидания выражается в тиках (если 0 то без ожидания)
-    int              (*_printf)(const char *, ...);               // Возвращает неопределенный результат
-    int              (*_deinit)(void **pcbl);
-    void              *pdrvcbl;                                   // Указатель на управляющую структуру необходимую для работы драйвера
+    int              (*_init)(void **pcbl, void *pdrv);               // Инициализация
+    int              (*_send_buf)(const void *buf, unsigned int len); // Отсылка буфера с данными
+    int              (*_wait_char)(unsigned char *b,  int ticks);     // Ожидание символа. ticks - время ожидания выражается в тиках (если 0 то без ожидания)
+    int              (*_printf)(const char *, ...);                   // Вывод форматированной строки
+    int              (*_deinit)(void **pcbl);                         // Деинициализация
+    void              *pdrvcbl;                                       // Указатель на управляющую структуру необходимую для работы драйвера
 } T_serial_io_driver;
 
 

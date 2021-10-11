@@ -61,7 +61,7 @@
 			<member name="virtual" type="sint32">0</member>
 			<member name="virtual_default" type="string">0</member>
 			<member name="treat_as" type="sint32">0</member>
-			<member name="type_fmt" type="string"/>
+			<member name="type_fmt" type="string">Fixed point number</member>
 			<member name="bit_shift" type="sint32">0</member>
 			<member name="bit_mask" type="string">no mask (-1)</member>
 			<member name="value_trf" type="CObject_ptr">NULL</member>
@@ -487,7 +487,9 @@
 			<member name="ena_inplace_params" type="sint32">1</member>
 			<member name="ena_inplace_values" type="sint32">1</member>
 		</object>
-		<object name="ObjId0046" type="CObList"/>
+		<object name="ObjId0046" type="CObList">
+			<member name="item0" type="CObject_ptr">ObjId0605</member>
+		</object>
 		<object name="ObjId0047" type="CObList"/>
 		<object name="ObjId0048" type="CObList">
 			<member name="item0" type="CObject_ptr">ObjId0049</member>
@@ -541,11 +543,11 @@
 		<object name="ObjId0051" type="CPrjItemRS_YBlockInfo">
 			<member name="join_class" type="sint32">0</member>
 			<member name="laxis_label" type="string">lAxis</member>
-			<member name="laxis_style" type="sint32">7</member>
-			<member name="laxis_min" type="real64">-1.00000000000000000000e+001</member>
-			<member name="laxis_max" type="real64">1.00000000000000000000e+001</member>
-			<member name="laxis_min_auto" type="sint32">1</member>
-			<member name="laxis_max_auto" type="sint32">1</member>
+			<member name="laxis_style" type="sint32">0</member>
+			<member name="laxis_min" type="real64">0.00000000000000000000e+000</member>
+			<member name="laxis_max" type="real64">1.00000000000000000000e+003</member>
+			<member name="laxis_min_auto" type="sint32">0</member>
+			<member name="laxis_max_auto" type="sint32">0</member>
 			<member name="raxis_label" type="string">rAxis</member>
 			<member name="raxis_style" type="sint32">0</member>
 			<member name="raxis_min" type="real64">-1.00000000000000000000e+001</member>
@@ -721,38 +723,46 @@
 			<member name="forecolor" type="uint32">0x0</member>
 		</object>
 		<object name="ObjId0067" type="CObArray" length="5">
-			<member name="index0" type="CObject_ptr">ObjId0575</member>
-			<member name="index1" type="CObject_ptr">ObjId0576</member>
-			<member name="index2" type="CObject_ptr">ObjId0577</member>
-			<member name="index3" type="CObject_ptr">ObjId0578</member>
-			<member name="index4" type="CObject_ptr">ObjId0579</member>
+			<member name="index0" type="CObject_ptr">ObjId0609</member>
+			<member name="index1" type="CObject_ptr">ObjId0610</member>
+			<member name="index2" type="CObject_ptr">ObjId0611</member>
+			<member name="index3" type="CObject_ptr">ObjId0612</member>
+			<member name="index4" type="CObject_ptr">ObjId0613</member>
 		</object>
-		<object name="ObjId0575" type="CPrjItemBlock_ColInfo">
+		<object name="ObjId0609" type="CPrjItemBlock_ColInfo">
 			<member name="column_visible" type="sint32">1</member>
 			<member name="column_width" type="sint32">179</member>
 			<member name="column_ix" type="sint32">0</member>
 		</object>
-		<object name="ObjId0576" type="CPrjItemBlock_ColInfo">
+		<object name="ObjId0610" type="CPrjItemBlock_ColInfo">
 			<member name="column_visible" type="sint32">1</member>
 			<member name="column_width" type="sint32">149</member>
 			<member name="column_ix" type="sint32">1</member>
 		</object>
-		<object name="ObjId0577" type="CPrjItemBlock_ColInfo">
+		<object name="ObjId0611" type="CPrjItemBlock_ColInfo">
 			<member name="column_visible" type="sint32">1</member>
 			<member name="column_width" type="sint32">120</member>
 			<member name="column_ix" type="sint32">2</member>
 		</object>
-		<object name="ObjId0578" type="CPrjItemBlock_ColInfo">
+		<object name="ObjId0612" type="CPrjItemBlock_ColInfo">
 			<member name="column_visible" type="sint32">1</member>
 			<member name="column_width" type="sint32">70</member>
 			<member name="column_ix" type="sint32">3</member>
 		</object>
-		<object name="ObjId0579" type="CPrjItemBlock_ColInfo">
+		<object name="ObjId0613" type="CPrjItemBlock_ColInfo">
 			<member name="column_visible" type="sint32">1</member>
 			<member name="column_width" type="sint32">200</member>
 			<member name="column_ix" type="sint32">4</member>
 		</object>
-		<object name="ObjId0072" type="CMapObToObEx"/>
+		<object name="ObjId0072" type="CMapObToObEx">
+			<member name="key0" type="CObject_ptr">ObjId0605</member>
+			<member name="value0" type="CObject_ptr">ObjId0614</member>
+		</object>
+		<object name="ObjId0614" type="CPrjItemBlock_VarInfo">
+			<member name="row_height" type="sint32">15</member>
+			<member name="row_cell_formats" type="CObArrayEx">ObjId0615</member>
+		</object>
+		<object name="ObjId0615" type="CObArray" length="0"/>
 		<object name="ObjId0093" type="CFlashProgDlg">
 			<member name="is_default" type="sint32">1</member>
 			<member name="csw_addr" type="string">fprgCSW</member>

@@ -16,7 +16,7 @@ static int Mn_usbfs_drv_printf(const char *fmt_ptr, ...);
 static int Mn_usbfs_drv_deinit(void **pcbl);
 
 
-T_monitor_driver mon_usbfs_vcom0_drv_driver =
+T_serial_io_driver mon_usbfs_vcom0_drv_driver =
         {
                 MN_DRIVER_MARK,
                 MN_USBFS_VCOM0_DRIVER,
@@ -28,7 +28,7 @@ T_monitor_driver mon_usbfs_vcom0_drv_driver =
                 0,
         };
 
-T_monitor_driver mon_usbfs_vcom1_drv_driver =
+T_serial_io_driver mon_usbfs_vcom1_drv_driver =
         {
                 MN_DRIVER_MARK,
                 MN_USBFS_VCOM1_DRIVER,
@@ -335,7 +335,7 @@ void Delete_recv_task(T_usbfs_drv_cbl *p)
 /*-------------------------------------------------------------------------------------------------------------
 
   pcbl - указатель на указатель на структуру со специальными данными необходимыми драйверу
-  pdrv - указатель на структуру T_monitor_driver
+  pdrv - указатель на структуру T_serial_io_driver
 -------------------------------------------------------------------------------------------------------------*/
 static int Mn_usbfs_drv_init(void **pcbl, void *pdrv)
 {
@@ -345,7 +345,7 @@ static int Mn_usbfs_drv_init(void **pcbl, void *pdrv)
   {
     uint32_t t;
 
-    t = ((T_monitor_driver *) pdrv)->driver_type;
+    t = ((T_serial_io_driver *) pdrv)->driver_type;
     switch (t)
     {
       case MN_USBFS_VCOM0_DRIVER:
@@ -390,7 +390,7 @@ static int Mn_usbfs_drv_deinit(void **pcbl)
 /*-------------------------------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------------------------------*/
-T_monitor_driver *Mnsdrv_get_usbfs_vcom0_driver(void)
+T_serial_io_driver *Mnsdrv_get_usbfs_vcom0_driver(void)
 {
   return &mon_usbfs_vcom0_drv_driver;
 }
@@ -398,7 +398,7 @@ T_monitor_driver *Mnsdrv_get_usbfs_vcom0_driver(void)
 /*-------------------------------------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------------------------------------*/
-T_monitor_driver *Mnsdrv_get_usbfs_vcom1_driver(void)
+T_serial_io_driver *Mnsdrv_get_usbfs_vcom1_driver(void)
 {
   return &mon_usbfs_vcom1_drv_driver;
 }
@@ -411,7 +411,7 @@ static int Mn_usbfs_drv_send_buf(const void *buf, unsigned int len)
 
   UINT res;
   ULONG actual_length;
-  T_monitor_driver *mdrv = (T_monitor_driver *) (tx_thread_identify()->driver);
+  T_serial_io_driver *mdrv = (T_serial_io_driver *) (tx_thread_identify()->driver);
   T_usbfs_drv_cbl *p = (T_usbfs_drv_cbl *) (mdrv->pdrvcbl);
 
 
@@ -441,8 +441,8 @@ static int Mn_usbfs_drv_wait_ch(unsigned char *b, int timeout)
   int32_t n;
   int32_t h;
 
-  T_monitor_driver *mdrv = (T_monitor_driver *) (tx_thread_identify()->driver);
-  T_usbfs_drv_cbl *p = (T_usbfs_drv_cbl *) (mdrv->pdrvcbl);
+  T_serial_io_driver *mdrv = (T_serial_io_driver *) (tx_thread_identify()->driver);
+  T_usbfs_drv_cbl *p       = (T_usbfs_drv_cbl *) (mdrv->pdrvcbl);
 
   if (p->ready_to_receive)
   {
@@ -507,8 +507,8 @@ static int Mn_usbfs_drv_printf(const char *fmt_ptr, ...)
   UINT res;
   ULONG actual_length;
   uint32_t n;
-  T_monitor_driver *mdrv = (T_monitor_driver *) (tx_thread_identify()->driver);
-  T_usbfs_drv_cbl *p = (T_usbfs_drv_cbl * )(mdrv->pdrvcbl);
+  T_serial_io_driver *mdrv = (T_serial_io_driver *) (tx_thread_identify()->driver);
+  T_usbfs_drv_cbl *p       = (T_usbfs_drv_cbl * )(mdrv->pdrvcbl);
   char *s = p->str;
   va_list ap;
 

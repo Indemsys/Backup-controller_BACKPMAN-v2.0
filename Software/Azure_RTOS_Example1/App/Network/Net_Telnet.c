@@ -19,7 +19,7 @@ static int Mn_rndis_telnet_drv_printf(const char  *fmt_ptr, ...);
 static int Mn_rndis_telnet_drv_deinit(void **pcbl);
 
 
-T_monitor_driver mon_rndis_telnet_drv_driver =
+T_serial_io_driver mon_rndis_telnet_drv_driver =
 {
   MN_DRIVER_MARK,
   MN_RNDIS_TELNET_DRIVER,
@@ -147,7 +147,7 @@ static int Mn_rndis_telnet_drv_send_buf(const void *buf, unsigned int len)
 {
   UINT                     res;
   NX_PACKET                *packet;
-  T_monitor_driver *mdrv = (T_monitor_driver *)(tx_thread_identify()->driver);
+  T_serial_io_driver *mdrv = (T_serial_io_driver *)(tx_thread_identify()->driver);
 
   res = nx_packet_allocate(&net_packet_pool,&packet, NX_TCP_PACKET, MS_TO_TICKS(10));
   if (res != NX_SUCCESS) return RES_ERROR;
@@ -181,8 +181,8 @@ static int Mn_rndis_telnet_drv_printf(const char  *fmt_ptr, ...)
 {
   UINT              res;
   NX_PACKET        *packet;
-  T_monitor_driver *mdrv = (T_monitor_driver *)(tx_thread_identify()->driver);
-  T_telnet_drv_cbl *p    = (T_telnet_drv_cbl *)(mdrv->pdrvcbl);
+  T_serial_io_driver *mdrv = (T_serial_io_driver *)(tx_thread_identify()->driver);
+  T_telnet_drv_cbl *p      = (T_telnet_drv_cbl *)(mdrv->pdrvcbl);
   char             *s = p->str;
   uint32_t         len;
   va_list           ap;
@@ -272,8 +272,8 @@ static int Mn_rndis_telnet_drv_wait_ch(unsigned char *b, int timeout)
   uint32_t     n;
   uint8_t      h;
 
-  T_monitor_driver *mdrv = (T_monitor_driver *)(tx_thread_identify()->driver);
-  T_telnet_drv_cbl *p    = (T_telnet_drv_cbl *)(mdrv->pdrvcbl);
+  T_serial_io_driver *mdrv = (T_serial_io_driver *)(tx_thread_identify()->driver);
+  T_telnet_drv_cbl *p      = (T_telnet_drv_cbl *)(mdrv->pdrvcbl);
 
 
   // Если индексы буферов равны то это значит отсутствие принятых пакетов
