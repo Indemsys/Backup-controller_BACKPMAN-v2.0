@@ -12,6 +12,4 @@
 
 ![PCB_removed_bg_](https://user-images.githubusercontent.com/12375003/130354261-314aabf0-ea89-419b-8b6a-3a848bfd4106.png)
 
-Переход на версию BACKPMAN v2.0 (https://habr.com/ru/post/578940/)
-
 ![BACKPMAN1-BACKPMAN2](https://user-images.githubusercontent.com/12375003/134777602-aa1473e7-f932-47ba-91c9-62986d3b4368.png)
