@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Example1\settings\Example1.Out.general.xcl" --backend -f "d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Example1\settings\Example1.Out.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Example1\settings\Example1.Out.general.xcl" --backend -f "D:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Example1\settings\Example1.Out.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Example1\settings\Example1.Out.general.xcl" "--debug_file=%~1" --backend -f "d:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Example1\settings\Example1.Out.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "D:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Example1\settings\Example1.Out.general.xcl" "--debug_file=%~1" --backend -f "D:\Embedded\Projects\OpenSource\Backup_controller_v2.0\Software\Azure_RTOS_Example1\settings\Example1.Out.driver.xcl" 
 
 @echo off 
 :end

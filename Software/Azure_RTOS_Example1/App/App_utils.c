@@ -13,14 +13,11 @@ uint64_t Measure_reference_time_interval(uint32_t time_delay_ms)
   ULONG   tickt2;
   uint64_t diff;
 
-
-
   tickt1 = tx_time_get();
   DELAY_ms(time_delay_ms);
   tickt2 = tx_time_get();
 
   diff = ((tickt2 - tickt1)*1000000ull)/(TX_TIMER_TICKS_PER_SECOND);
-
   return diff;
 }
 

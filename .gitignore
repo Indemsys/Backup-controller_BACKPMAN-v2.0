@@ -14,3 +14,4 @@ CMakeLists.txt
 *.ewd
 **/.ninja_log
 **/.ninja_deps
+**/Win32
