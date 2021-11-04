@@ -5,7 +5,7 @@
  - Описание разработки платы BACKPMAN v1.0 (https://habr.com/ru/post/562462/)
  - Установка Azure RTOS на BACKPMAN v1.0 (https://habr.com/ru/post/573352/). 
  - Технологии отладки и тюнинг платы BACKPMAN v1.0 (https://habr.com/ru/post/574088/)  
- - Развертывание Azure RTOS и USB стека (https://habr.com/ru/post/582742/)
+ - Развертывание Azure RTOS и USB стека на BACKPMAN v2.0 (https://habr.com/ru/post/582742/)
 
 ![Animated](https://user-images.githubusercontent.com/12375003/130319331-6bef8539-8da9-4f4c-a86c-8b25ab7f2064.gif)
 
